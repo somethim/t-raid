@@ -1,0 +1,21 @@
+{
+  "extends": ["expo/tsconfig.base", "@zenncore/config/typescript/native"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/assets/*": ["./assets/*"]
+    }
+  },
+
+  "include": [
+    "src",
+    "declerations",
+    "tailwind.config.js",
+    ".expo/types/**/*.ts",
+    "nativewind-env.d.ts",
+    "expo-env.d.ts",
+  ]
+}

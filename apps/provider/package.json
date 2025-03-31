@@ -1,0 +1,41 @@
+{
+  "name": "@traid/provider",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "convex dev",
+    "setup": "convex dev --until-success",
+    "lint": "biome check --fix --unsafe",
+    "deploy": "convex deploy"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/definition/_generated/api.d.ts",
+      "default": "./src/definition/_generated/api.js"
+    },
+    "./types/data-model": {
+      "import": "./src/definition/_generated/dataModel.d.ts"
+    },
+    "./schemas/validators": "./src/schemas/common/validators/index.ts",
+    "./schemas/enums": "./src/schemas/enums/index.ts",
+    "./models/*": "./src/models/*.ts",
+    "./services/*": "./src/definition/services/*.ts",
+    "./services/common/*": "./src/definition/services/common/*.ts"
+  },
+  "dependencies": {
+    "@auth/core": "^0.37.4",
+    "@convex-dev/auth": "^0.0.80",
+    "@convex-dev/expo-push-notifications": "^0.1.4",
+    "@convex-dev/migrations": "^0.2.5",
+    "@react-email/components": "^0.0.32",
+    "@types/fluent-ffmpeg": "^2.1.27",
+    "convex": "^1.20.0",
+    "convex-helpers": "^0.1.71",
+    "date-fns-tz": "^3.2.0",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "resend": "^4.1.2",
+    "sharp": "^0.33.5",
+    "twilio": "^5.4.5"
+  }
+}
