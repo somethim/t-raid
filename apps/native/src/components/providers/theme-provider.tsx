@@ -1,4 +1,4 @@
-import { THEME_COLORS } from "@/lib/constants";
+import { FONTS, THEME_COLORS } from "@/lib/constants";
 import type { Theme } from "@react-navigation/native";
 import { ThemeProvider as ThemeProviderPrimitive } from "@react-navigation/native";
 import { useColorScheme } from "@zenncore/hooks/native";
@@ -9,46 +9,12 @@ import { useMMKVString } from "react-native-mmkv";
 const LIGHT_THEME = {
   dark: false,
   colors: THEME_COLORS.light,
-  fonts: {
-    regular: {
-      fontFamily: "RFDewi-Regular",
-      fontWeight: "500",
-    },
-    medium: {
-      fontFamily: "RFDewiExtended-Bold",
-      fontWeight: "700",
-    },
-    bold: {
-      fontFamily: "RFDewiExtended-Bold",
-      fontWeight: "700",
-    },
-    heavy: {
-      fontFamily: "RFDewi-Black",
-      fontWeight: "900",
-    },
-  },
+  fonts: FONTS,
 } satisfies Theme;
 const DARK_THEME = {
   dark: true,
   colors: THEME_COLORS.dark,
-  fonts: {
-    regular: {
-      fontFamily: "RFDewi-Regular",
-      fontWeight: "500",
-    },
-    medium: {
-      fontFamily: "RFDewiExtended-Bold",
-      fontWeight: "700",
-    },
-    bold: {
-      fontFamily: "RFDewiExtended-Bold",
-      fontWeight: "700",
-    },
-    heavy: {
-      fontFamily: "RFDewi-Black",
-      fontWeight: "900",
-    },
-  },
+  fonts: FONTS,
 } satisfies Theme;
 
 // Prevent the splash screen from auto-hiding before getting the color scheme.

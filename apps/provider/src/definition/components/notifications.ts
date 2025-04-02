@@ -1,6 +1,6 @@
-import { PushNotifications } from "@convex-dev/expo-push-notifications";
-import { components } from "../../definition/_generated/api";
+import {PushNotifications} from "@convex-dev/expo-push-notifications";
+import {components} from "../_generated/api";
 
 export const notifications = new PushNotifications(
-  components.pushNotifications,
+    components.pushNotifications,
 );

@@ -3,18 +3,18 @@ import Facebook from "@auth/core/providers/facebook";
 import Google from "@auth/core/providers/google";
 import { convexAuth } from "@convex-dev/auth/server";
 
-export const { auth, signIn, signOut, store } = convexAuth({
+export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
   providers: [
     Facebook({
       clientId: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET
     }),
     Apple({
       authorization: {
         params: {
           scope: "name email",
-          response_mode: "form_post",
-        },
+          response_mode: "form_post"
+        }
       },
       profile(apple) {
         const fullName = apple.user?.name
@@ -28,45 +28,19 @@ export const { auth, signIn, signOut, store } = convexAuth({
           emailVerificationTime:
             apple.email_verified === true || apple.email_verified === "true"
               ? apple.auth_time
-              : undefined,
+              : undefined
         };
-      },
+      }
     }),
     Google({
-      async profile(google, tokens) {
-        const profile = await fetch(
-          "https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses,phoneNumbers,addresses,birthdays,photos",
-          {
-            headers: {
-              Authorization: `Bearer ${tokens.access_token}`,
-            },
-          },
-        );
-        const data = await profile.json();
-
-        // const birthdate = (() => {
-        //   if (data.birthdays?.[0]) {
-        //     const birthdate = new Date();
-
-        //     birthdate.setFullYear(data.birthdays[0].date.year);
-        //     birthdate.setMonth(data.birthdays[0].date.month);
-        //     birthdate.setDate(data.birthdays[0].date.day);
-
-        //     return birthdate.toISOString();
-        //   }
-
-        //   return undefined;
-        // })();
-
-        const user = {
+      async profile(google) {
+        return {
           fullName: `${google.given_name} ${google.family_name ?? ""}`,
           email: google.email,
           birthdate: undefined,
           id: google.sub,
-          image: google.picture,
+          image: google.picture
         };
-
-        return user;
       },
 
       authorization: {
@@ -75,11 +49,11 @@ export const { auth, signIn, signOut, store } = convexAuth({
             "https://www.googleapis.com/auth/userinfo.profile",
             "https://www.googleapis.com/auth/userinfo.email",
             "https://www.googleapis.com/auth/user.birthday.read",
-            "https://www.googleapis.com/auth/user.phonenumbers.read",
-          ].join(" "),
-        },
-      },
-    }),
+            "https://www.googleapis.com/auth/user.phonenumbers.read"
+          ].join(" ")
+        }
+      }
+    })
   ],
   callbacks: {
     async redirect({ redirectTo }) {
@@ -93,11 +67,11 @@ export const { auth, signIn, signOut, store } = convexAuth({
     async afterUserCreatedOrUpdated(ctx, { userId, existingUserId }) {
       if (existingUserId) return;
 
-      await ctx.db.insert("clients", {
+      await ctx.db.insert("users", {
         user: userId,
         status: "active",
-        balance: 0,
+        balance: 0
       });
-    },
-  },
+    }
+  }
 });

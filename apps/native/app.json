@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "YourAppName",
+    "slug": "your-app-slug",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/cat.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/cat.png",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.yourapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/cat.png"
+      },
+      "package": "com.yourcompany.yourapp"
+    },
+    "web": {
+      "favicon": "./assets/images/cat.png"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

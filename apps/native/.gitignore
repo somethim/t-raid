@@ -9,6 +9,9 @@
 /ios
 /android
 
+.cache
+.expo
+
 #
 .env
 firebase-service-account-lookup.json

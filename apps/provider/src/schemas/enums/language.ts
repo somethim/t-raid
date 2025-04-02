@@ -1,9 +1,9 @@
 import { v } from "convex/values";
-import type { Tuple } from "../../../../../packages/shared/types/src/utilities/tuple";
+import type { Tuple } from "@zenncore/types/utilities";
 
 export const LANGUAGE = {
   AL: "al",
-  EN: "en",
+  EN: "en"
 } as const;
 export const LANGUAGES = Object.values(LANGUAGE) as Tuple<
   (typeof LANGUAGE)[keyof typeof LANGUAGE],
@@ -14,5 +14,5 @@ export type Language = (typeof LANGUAGE)[keyof typeof LANGUAGE];
 
 export const languageValidator = v.union(
   v.literal(LANGUAGE.AL),
-  v.literal(LANGUAGE.EN),
+  v.literal(LANGUAGE.EN)
 );

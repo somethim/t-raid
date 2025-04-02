@@ -9,13 +9,10 @@
       "@/assets/*": ["./assets/*"]
     }
   },
-
   "include": [
     "src",
     "declerations",
     "tailwind.config.js",
-    ".expo/types/**/*.ts",
-    "nativewind-env.d.ts",
-    "expo-env.d.ts",
+    "nativewind-env.d.ts"
   ]
 }

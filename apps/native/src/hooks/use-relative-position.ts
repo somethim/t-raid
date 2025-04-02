@@ -166,11 +166,10 @@ const getAlignPosition = ({
       } else if (spaceRight >= contentWidth) {
         left = dimensions.width - insetRight - contentWidth;
       } else {
-        const centeredPosition = Math.max(
+        left = Math.max(
           insetLeft,
           (dimensions.width - contentWidth - insetRight) / 2,
         );
-        left = centeredPosition;
       }
     }
   }
