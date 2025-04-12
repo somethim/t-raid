@@ -1,11 +1,11 @@
-import { defineSchema, defineTable } from "convex/server";
-import { accountSchema, transactionSchema } from "../schemas/tables";
 import { authTables } from "@convex-dev/auth/server";
+import { defineSchema, defineTable } from "convex/server";
+import { itemSchema, userSchema } from "../schemas/tables";
 
 export default defineSchema({
   ...authTables,
-  users: defineTable(accountSchema)
+  users: defineTable(userSchema)
     .index("email", ["email"])
-    .index("phone", ["phone"]),
-  transactions: defineTable(transactionSchema).index("accountId", ["accountId"])
+    .index("username", ["username"]),
+  items: defineTable(itemSchema).index("users", ["user"]),
 });

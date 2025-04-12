@@ -7,14 +7,14 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
   providers: [
     Facebook({
       clientId: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     }),
     Apple({
       authorization: {
         params: {
           scope: "name email",
-          response_mode: "form_post"
-        }
+          response_mode: "form_post",
+        },
       },
       profile(apple) {
         const fullName = apple.user?.name
@@ -28,9 +28,9 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
           emailVerificationTime:
             apple.email_verified === true || apple.email_verified === "true"
               ? apple.auth_time
-              : undefined
+              : undefined,
         };
-      }
+      },
     }),
     Google({
       async profile(google) {
@@ -39,7 +39,7 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
           email: google.email,
           birthdate: undefined,
           id: google.sub,
-          image: google.picture
+          image: google.picture,
         };
       },
 
@@ -49,11 +49,11 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
             "https://www.googleapis.com/auth/userinfo.profile",
             "https://www.googleapis.com/auth/userinfo.email",
             "https://www.googleapis.com/auth/user.birthday.read",
-            "https://www.googleapis.com/auth/user.phonenumbers.read"
-          ].join(" ")
-        }
-      }
-    })
+            "https://www.googleapis.com/auth/user.phonenumbers.read",
+          ].join(" "),
+        },
+      },
+    }),
   ],
   callbacks: {
     async redirect({ redirectTo }) {
@@ -70,8 +70,8 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
       await ctx.db.insert("users", {
         user: userId,
         status: "active",
-        balance: 0
+        balance: 0,
       });
-    }
-  }
+    },
+  },
 });

@@ -1,4 +1,8 @@
-import type { PaginationOptions, TableDefinition, WithoutSystemFields } from "convex/server";
+import type {
+  PaginationOptions,
+  TableDefinition,
+  WithoutSystemFields,
+} from "convex/server";
 import type { Infer, Validator } from "convex/values";
 import type { Doc, Id, TableNames } from "../definition/_generated/dataModel";
 import type { MutationCtx, QueryCtx } from "../definition/_generated/server";
@@ -15,7 +19,7 @@ export const repository = <T extends TableNames>(tableName: T) => {
   return {
     create: async (
       ctx: MutationCtx,
-      args: { data: Infer<typeof validator> }
+      args: { data: Infer<typeof validator> },
     ) => {
       return await ctx.db.insert(tableName, args.data);
     },
@@ -24,14 +28,14 @@ export const repository = <T extends TableNames>(tableName: T) => {
     },
     update: async (
       ctx: MutationCtx | QueryCtx,
-      args: { id: Id<T>; data: Infer<typeof partialValidator> }
+      args: { id: Id<T>; data: Infer<typeof partialValidator> },
     ) => {
       // @ts-ignore
       return ctx.db.patch(args.id, args.data);
     },
     getAll: async (
       ctx: MutationCtx | QueryCtx,
-      args: Infer<typeof partialValidator>
+      args: Infer<typeof partialValidator>,
     ) => {
       const query = ctx.db.query<T>(tableName);
       // @ts-ignore
@@ -46,7 +50,7 @@ export const repository = <T extends TableNames>(tableName: T) => {
       args: {
         filter: Infer<typeof partialValidator>;
         paginationOpts: PaginationOptions;
-      }
+      },
     ) => {
       const query = ctx.db.query<T>(tableName);
       // @ts-ignore
@@ -56,13 +60,12 @@ export const repository = <T extends TableNames>(tableName: T) => {
 
     replace: (
       ctx: MutationCtx,
-      args: { id: Id<T>; data: Infer<typeof validator> }
+      args: { id: Id<T>; data: Infer<typeof validator> },
     ) => {
       // @ts-ignore
       return ctx.db.replace(args.id, args.data);
-    }
+    },
   };
 };
 
-const applyFilterToQuery = () => {
-};
+const applyFilterToQuery = () => {};

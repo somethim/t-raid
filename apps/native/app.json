@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "YourAppName",
-    "slug": "your-app-slug",
+    "name": "t-raid",
+    "slug": "t-raid",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/cat.png",
+    "icon": "./assets/images/cat.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/cat.png",
+      "image": "./assets/images/cat.jpg",
       "resizeMode": "contain"
     },
     "assetBundlePatterns": [
@@ -15,16 +15,16 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.yourapp"
+      "bundleIdentifier": "com.company.t-raid"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/cat.png"
+        "foregroundImage": "./assets/images/cat.jpg"
       },
-      "package": "com.yourcompany.yourapp"
+      "package": "com.company.t-raid"
     },
     "web": {
-      "favicon": "./assets/images/cat.png"
+      "favicon": "./assets/images/cat.jpg"
     },
     "plugins": [
       "expo-font"

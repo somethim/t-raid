@@ -15,6 +15,7 @@ import type * as crons from "../crons.js";
 import type * as http from "../http.js";
 import type * as migrations from "../migrations.js";
 import type * as services_common_notifications from "../services/common/notifications.js";
+import type * as services_common_twilo from "../services/common/twilo.js";
 import type * as services_user from "../services/user.js";
 
 import type {
@@ -39,6 +40,7 @@ declare const fullApi: ApiFromModules<{
   http: typeof http;
   migrations: typeof migrations;
   "services/common/notifications": typeof services_common_notifications;
+  "services/common/twilo": typeof services_common_twilo;
   "services/user": typeof services_user;
 }>;
 declare const fullApiWithMounts: typeof fullApi;

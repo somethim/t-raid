@@ -1,3 +1,15 @@
+import { HomeIcon } from "@zennui/icons";
+import type { Icon as IconType } from "@zenncore/types/components";
+import type { Href } from "expo-router";
+
+export type Route = Readonly<{
+  name: string;
+  Icon?: IconType;
+  subRoutes?: Route[];
+  href: Href;
+  description?: string;
+}>;
+
 export const THEME_COLORS = {
   light: {
     primary: "#000000",
@@ -35,3 +47,12 @@ export const FONTS = {
     fontWeight: "900",
   },
 } as const;
+
+export const ROUTES = {
+  home: {
+    name: "home",
+    icon: HomeIcon,
+    href: "/",
+  },
+} as const;
+export type Routes = Record<string, Route>;
