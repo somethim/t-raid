@@ -1,5 +1,7 @@
-import { v } from "convex/values";
+import { Infer, v } from "convex/values";
 import { itemStatusValidator, shopValidator } from "../enums";
+
+export type Item = Infer<typeof itemSchema>;
 
 export const itemSchema = v.object({
   user: v.id("users"),

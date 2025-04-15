@@ -2,8 +2,8 @@ import type { DeepPartial } from "@zenncore/types/utilities";
 import {
   type GenericValidator,
   type Infer,
-  type Validator,
   v,
+  type Validator,
 } from "convex/values";
 
 // biome-ignore lint/suspicious/noExplicitAny: utility type
@@ -84,9 +84,10 @@ export type ExtendValidator<
   // biome-ignore lint/suspicious/noExplicitAny: utility type
   V extends Validator<any, "required", string>,
   T extends Record<string, GenericValidator>,
-> = V extends Validator<infer S>
-  ? Validator<S & InferExtendedValidator<T>>
-  : Validator<V["type"] & InferExtendedValidator<T>>;
+> =
+  V extends Validator<infer S>
+    ? Validator<S & InferExtendedValidator<T>>
+    : Validator<V["type"] & InferExtendedValidator<T>>;
 
 export const extend = <
   // biome-ignore lint/suspicious/noExplicitAny: utility type
@@ -119,9 +120,10 @@ export type OmitValidator<
   // biome-ignore lint/suspicious/noExplicitAny: utility type
   V extends Validator<any, "required", string>,
   K extends keyof V["type"],
-> = V extends Validator<infer S>
-  ? Validator<Omit<S, K>>
-  : Validator<Omit<V["type"], K>>;
+> =
+  V extends Validator<infer S>
+    ? Validator<Omit<S, K>>
+    : Validator<Omit<V["type"], K>>;
 
 export const omit = <
   // biome-ignore lint/suspicious/noExplicitAny: utility type
@@ -156,9 +158,10 @@ export type PickValidator<
   // biome-ignore lint/suspicious/noExplicitAny: utility type
   V extends Validator<any, "required", string>,
   K extends keyof V["type"],
-> = V extends Validator<infer S>
-  ? Validator<Pick<S, K>>
-  : Validator<Pick<V["type"], K>>;
+> =
+  V extends Validator<infer S>
+    ? Validator<Pick<S, K>>
+    : Validator<Pick<V["type"], K>>;
 
 export const pick = <
   // biome-ignore lint/suspicious/noExplicitAny: utility type

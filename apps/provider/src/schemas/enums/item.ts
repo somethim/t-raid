@@ -1,25 +1,25 @@
 import type { Tuple } from "@zenncore/types/utilities";
 import { v } from "convex/values";
 
-export const SHOP = {
+export const Item = {
   FOLEJA: "foleja",
   AMAZON: "amazon",
   ALIEXPRESS: "aliexpress",
   EBAY: "ebay",
 };
 
-export const SHOPS = Object.values(SHOP) as Tuple<
-  (typeof SHOP)[keyof typeof SHOP],
+export const SHOPS = Object.values(Item) as Tuple<
+  (typeof Item)[keyof typeof Item],
   1
 >;
 
-export type Shop = (typeof SHOP)[keyof typeof SHOP];
+export type Shop = (typeof Item)[keyof typeof Item];
 
 export const shopValidator = v.union(
-  v.literal(SHOP.FOLEJA),
-  v.literal(SHOP.AMAZON),
-  v.literal(SHOP.ALIEXPRESS),
-  v.literal(SHOP.EBAY),
+  v.literal(Item.FOLEJA),
+  v.literal(Item.AMAZON),
+  v.literal(Item.ALIEXPRESS),
+  v.literal(Item.EBAY),
 );
 
 export const ITEM_STATUS = {

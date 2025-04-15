@@ -1,2 +1,2 @@
 export * from "./language";
-export * from "./shop";
+export * from "./item";

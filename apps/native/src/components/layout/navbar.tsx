@@ -1,11 +1,16 @@
 import type { Route, Routes } from "@/lib/constants";
 import { cn } from "@zenncore/utils";
+import { View } from "@zennui/native/slot";
 import { Text } from "@zennui/native/text";
 import { usePathname } from "expo-router";
 import { TabTrigger } from "expo-router/ui";
 import { forwardRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Pressable, useWindowDimensions, View } from "react-native";
+import {
+  Pressable,
+  useWindowDimensions,
+  View as NativeView,
+} from "react-native";
 import Animated, {
   interpolate,
   runOnJS,
@@ -43,7 +48,7 @@ export const Navbar = ({ routes }: NavbarProps) => {
 
 type NavbarItemProps = Route;
 
-const NavbarItem = forwardRef<View, NavbarItemProps>(
+const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
   ({ href, Icon, name, subRoutes }, ref) => {
     const { t } = useTranslation();
     const pathname = usePathname();
@@ -51,7 +56,7 @@ const NavbarItem = forwardRef<View, NavbarItemProps>(
       pathname.startsWith(href as string),
     );
     const [isItemAnimating, setIsItemAnimating] = useState<boolean>(false);
-    const itemRef = useAnimatedRef<View>();
+    const itemRef = useAnimatedRef<NativeView>();
     const itemNameWidth = useSharedValue(0);
     const opacity = useDerivedValue(() => {
       const targetOpacity = Number(isActiveItem);

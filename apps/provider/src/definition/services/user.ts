@@ -6,13 +6,32 @@ import {
   authenticatedQuery,
   partial,
 } from "../../utils";
-import { internalQuery } from "../_generated/server";
 
-export const getById = internalQuery({
+export const getAll = authenticatedQuery({
+  args: {},
+  handler: User.getAll,
+});
+
+export const getById = authenticatedQuery({
   args: {
     id: v.id("users"),
   },
   handler: User.getById,
+});
+
+export const updateUser = authenticatedMutation({
+  args: {
+    id: v.id("users"),
+    data: partial(userSchema),
+  },
+  handler: User.updateUser,
+});
+
+export const deleteUser = authenticatedMutation({
+  args: {
+    id: v.id("users"),
+  },
+  handler: User.deleteUser,
 });
 
 export const getCurrentUser = authenticatedQuery({

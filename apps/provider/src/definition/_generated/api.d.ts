@@ -9,20 +9,39 @@
  */
 
 import type * as auth from "../auth.js";
-import type * as components_migrations from "../components/migrations.js";
-import type * as components_notifications from "../components/notifications.js";
+import type * as components_migration from "../components/migration.js";
+import type * as components_notification from "../components/notification.js";
 import type * as crons from "../crons.js";
 import type * as http from "../http.js";
+import type * as migrations_parkingLot from "../migrations/parkingLot.js";
+import type * as migrations_payment from "../migrations/payment.js";
+import type * as migrations_user from "../migrations/user.js";
 import type * as migrations from "../migrations.js";
-import type * as services_common_notifications from "../services/common/notifications.js";
-import type * as services_common_twilo from "../services/common/twilo.js";
+import type * as providers_LookUpProvider from "../providers/LookUpProvider.js";
+import type * as services_addressSearch from "../services/addressSearch.js";
+import type * as services_booking from "../services/booking.js";
+import type * as services_client from "../services/client.js";
+import type * as services_common_mapbox from "../services/common/mapbox.js";
+import type * as services_common_storage from "../services/common/storage.js";
+import type * as services_common_stripe from "../services/common/stripe.js";
+import type * as services_common_twilio from "../services/common/twilio.js";
+import type * as services_contact from "../services/contact.js";
+import type * as services_direction from "../services/direction.js";
+import type * as services_favorite from "../services/favorite.js";
+import type * as services_message from "../services/message.js";
+import type * as services_notifications from "../services/notifications.js";
+import type * as services_parkingLot from "../services/parkingLot.js";
+import type * as services_parkingSpot from "../services/parkingSpot.js";
+import type * as services_payment from "../services/payment.js";
+import type * as services_preference from "../services/preference.js";
+import type * as services_provider from "../services/provider.js";
+import type * as services_review from "../services/review.js";
+import type * as services_room from "../services/room.js";
+import type * as services_temporaryToken from "../services/temporaryToken.js";
 import type * as services_user from "../services/user.js";
+import type * as services_vehicle from "../services/vehicle.js";
 
-import type {
-  ApiFromModules,
-  FilterApi,
-  FunctionReference,
-} from "convex/server";
+import type {ApiFromModules, FilterApi, FunctionReference,} from "convex/server";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -34,14 +53,37 @@ import type {
  */
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
-  "components/migrations": typeof components_migrations;
-  "components/notifications": typeof components_notifications;
+  "components/migration": typeof components_migration;
+  "components/notification": typeof components_notification;
   crons: typeof crons;
   http: typeof http;
+  "migrations/parkingLot": typeof migrations_parkingLot;
+  "migrations/payment": typeof migrations_payment;
+  "migrations/user": typeof migrations_user;
   migrations: typeof migrations;
-  "services/common/notifications": typeof services_common_notifications;
-  "services/common/twilo": typeof services_common_twilo;
+  "providers/LookUpProvider": typeof providers_LookUpProvider;
+  "services/addressSearch": typeof services_addressSearch;
+  "services/booking": typeof services_booking;
+  "services/client": typeof services_client;
+  "services/common/mapbox": typeof services_common_mapbox;
+  "services/common/storage": typeof services_common_storage;
+  "services/common/stripe": typeof services_common_stripe;
+  "services/common/twilio": typeof services_common_twilio;
+  "services/contact": typeof services_contact;
+  "services/direction": typeof services_direction;
+  "services/favorite": typeof services_favorite;
+  "services/message": typeof services_message;
+  "services/notifications": typeof services_notifications;
+  "services/parkingLot": typeof services_parkingLot;
+  "services/parkingSpot": typeof services_parkingSpot;
+  "services/payment": typeof services_payment;
+  "services/preference": typeof services_preference;
+  "services/provider": typeof services_provider;
+  "services/review": typeof services_review;
+  "services/room": typeof services_room;
+  "services/temporaryToken": typeof services_temporaryToken;
   "services/user": typeof services_user;
+  "services/vehicle": typeof services_vehicle;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
 

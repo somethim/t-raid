@@ -11,6 +11,7 @@ import {
   ReanimatedLogLevel,
 } from "react-native-reanimated";
 import { toast } from "sonner-native";
+import "expo-dev-client";
 
 configureReanimatedLogger({
   level: ReanimatedLogLevel.warn,

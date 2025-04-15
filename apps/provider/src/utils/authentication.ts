@@ -6,11 +6,11 @@ import {
 } from "convex-helpers/server/customFunctions";
 import { internal } from "../definition/_generated/api";
 import {
-  type MutationCtx,
-  type QueryCtx,
   action,
   mutation,
+  type MutationCtx,
   query,
+  type QueryCtx,
 } from "../definition/_generated/server";
 import { wrapWithAuthentication } from "./context";
 
