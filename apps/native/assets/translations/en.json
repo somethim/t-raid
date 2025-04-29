@@ -1,0 +1,678 @@
+{
+  "general": {
+    "continue": "Continue",
+    "loading": "Loading...",
+    "view-more": "View more",
+    "months": [
+      "JANUARY",
+      "FEBRUARY",
+      "MARCH",
+      "APRIL",
+      "MAY",
+      "JUNE",
+      "JULY",
+      "AUGUST",
+      "SEPTEMBER",
+      "OCTOBER",
+      "NOVEMBER",
+      "DECEMBER"
+    ],
+    "days": [
+      "MONDAY",
+      "TUESDAY",
+      "WEDNESDAY",
+      "THURSDAY",
+      "FRIDAY",
+      "SATURDAY",
+      "SUNDAY"
+    ],
+    "vehicle-category": {
+      "CAR": "Car",
+      "MINI": "Mini",
+      "SEDAN": "Sedan",
+      "COUPE": "Coupe",
+      "SUV": "SUV",
+      "MOTORBIKE": "Motorbike",
+      "BUS": "Bus",
+      "VAN": "Van",
+      "TRUCK": "Truck",
+      "SCOOTER": "Scooter",
+      "CAMPER": "Camper"
+    },
+    "features": {
+      "COVERED": "Covered",
+      "ELECTRIC_CHARGING": "Electric charging",
+      "GATED": "Gated",
+      "SURVEILLANCE": "Surveillance",
+      "CAR_WASH": "Car wash"
+    },
+    "settings": {
+      "profile": "Profile",
+      "terms-conditions": "Terms & Conditions",
+      "vehicles": "Vehicles",
+      "activity": "Activity",
+      "help": "Help",
+      "language": "Language",
+      "appearance": {
+        "title": "Appearance",
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+      },
+      "sign-out": {
+        "title": "Sign out",
+        "failed": "Sign out failed"
+      },
+      "delete-account": {
+        "title": "Delete account",
+        "description": "Are you sure you want to delete your account? This action is irreversible.",
+        "failed": "Failed to delete account",
+        "confirm-delete": "Confirm delete"
+      }
+    }
+  },
+  "network": {
+    "no-internet": "You are not connected to the internet"
+  },
+  "update": {
+    "reload-app": "Reload app",
+    "available": "A new app version is available",
+    "download": "Download",
+    "downloading": "Downloading",
+    "downloaded": "Update downloaded"
+  },
+  "routes": {
+    "sign-in": "Continue",
+    "register": "Register",
+    "home": "Home",
+    "parkings": "Parkings",
+    "map": "Map",
+    "chats": "Chats",
+    "settings": "Settings",
+    "bookings": "Bookings",
+    "lots": "Lots"
+  },
+  "onboard": {
+    "fast-easy-parking": "Fast & Easy Parking",
+    "fast-easy-parking-description": "LookUp helps you find parking easier and faster than ever before.",
+    "security-priority": "Security is priority",
+    "security-priority-description": "We take your privacy seriously and ensure that your data is secure.",
+    "lookup-coins": "Lookup Coins",
+    "lookup-coins-description": "Lookup Coin is a new token that will be used to pay for parking spots and other services."
+  },
+  "sign-in": {
+    "title": "Sign in",
+    "sign-in": "Sign in",
+    "signing-in": "Signing in",
+    "don't-have-account": "Don't have an account?",
+    "sign-up": "Sign up",
+    "sign-in-error": "Email or password is incorrect",
+    "email-not-found": "No account found. Please ensure the email is entered correctly",
+    "incorrect-password": "Incorrect password",
+    "too-many-failed-attempts": "Too many failed attempts. Please try again later",
+    "or": "OR",
+    "email": {
+      "required": "Email is required",
+      "invalid": "Email is invalid",
+      "label": "Write your email",
+      "placeholder": "Your email"
+    },
+    "password": {
+      "required": "Password is required",
+      "short": "Password must be at least 8 characters long",
+      "label": "And your password",
+      "placeholder": "Your password"
+    }
+  },
+  "sign-up": {
+    "title": "Sign up",
+    "client": "Client",
+    "provider": "Provider",
+    "register": "Register",
+    "registering": "Registering",
+    "failed": "Sign up failed",
+    "full-name": {
+      "required": "Your full name is required",
+      "not-number": "Entered full name shouldn't be a number",
+      "placeholder": "Your full name",
+      "label": "Write your full name"
+    },
+    "email": {
+      "required": "Your email is required",
+      "invalid": "Email is invalid",
+      "label": "Write your email",
+      "placeholder": "Your email"
+    },
+    "phone": {
+      "required": "Your phone number is required",
+      "invalid": "Phone number is not valid",
+      "placeholder": "phone number",
+      "label": "Write your phone number",
+      "send-verification-message-failed": "Failed to send verification message",
+      "sending-code": "Sending Code"
+    },
+    "verify": {
+      "required": "Verification code is required",
+      "invalid": "Verification code must contain 4 digits",
+      "label": "Verify phone number",
+      "verification-failed": "OTP verification failed",
+      "incorrect": "Incorrect verification code",
+      "verifying": "Verifying OTP"
+    },
+    "birthdate": {
+      "invalid": "Birthdate is not valid",
+      "required": "Birthdate is required",
+      "underage": "You must be at least 18 years old",
+      "placeholder": "Your birthdate",
+      "label": "Enter your birthdate"
+    },
+    "password": {
+      "required": "Password is required",
+      "invalid": "Password must be at least 8 characters",
+      "placeholder": "Your password",
+      "label": "Write your password"
+    }
+  },
+  "client": {
+    "home": {
+      "welcome-back": "Welcome back",
+      "favorite-lots": "Your favorite lots",
+      "my-spaces": "My spaces",
+      "parking-categories": "Parking categories",
+      "nearby-parking": "Nearby parking",
+      "view-more": "View more",
+      "airport": "Airport",
+      "city-center": "City center",
+      "school": "School",
+      "park": "Park",
+      "active": "Active",
+      "bookings": "Bookings",
+      "favorites": "Favorites",
+      "history": "History",
+      "deposit": "Deposit",
+      "transfer": "Transfer",
+      "details": "Details",
+      "search-name-location": "Search by name or location",
+      "no-nearby-lots": "No nearby lots found"
+    },
+    "settings": {
+      "title": "Settings",
+      "client-since": "Parking since",
+      "become-provider": "Become a Provider",
+      "become-provider-description": "Earn money through LookUp"
+    }
+  },
+  "provider": {
+    "register": {
+      "title": "Create account",
+      "label": "Register as provider",
+      "iban": {
+        "label": "IBAN",
+        "required": "IBAN is required",
+        "not-number": "IBAN shouldn't be a number"
+      },
+      "swift": {
+        "label": "SWIFT Code",
+        "required": "SWIFT Code is required",
+        "not-number": "SWIFT Code shouldn't be a number"
+      },
+      "birthdate": {
+        "label": "Enter your date of birth",
+        "placeholder": "Your date of birth",
+        "invalid": "Date of birth is not valid",
+        "required": "Date of birth is required",
+        "underage": "You must be at least 18 years old"
+      },
+      "address": {
+        "label": "Address",
+        "required": "Address is required",
+        "not-number": "Address must not be number",
+        "street": {
+          "label": "Street",
+          "required": "Street is required",
+          "not-number": "Street must not be a number"
+        },
+        "city": {
+          "label": "City",
+          "required": "City is required",
+          "not-number": "City must not be a number"
+        },
+        "postalCode": {
+          "label": "Postal Code",
+          "required": "Postal Code is required",
+          "invalid": "Postal Code is not valid"
+        }
+      },
+      "register": "Register",
+      "registering": "Registering",
+      "registered-as-provider": "Registered as provider",
+      "register-failed": "Registration failed"
+    },
+    "home": {
+      "welcome-back": "Welcome back",
+      "balance": "Your Balance",
+      "my-parkings": "My parkings",
+      "bookings": "Bookings",
+      "view-more": "View more",
+      "edit-parking-details": "Edit parking details",
+      "no-lots": "You don't have any parking lots",
+      "no-bookings": "You don't have any bookings"
+    },
+    "camera": {
+      "title": "Scan ticket"
+    },
+    "bookings": {
+      "title": "Bookings",
+      "slot": "Slot",
+      "price": "Price",
+      "empty-title": "You have no bookings",
+      "empty-description": "Your parking reservations will appear here"
+    },
+    "booking": {
+      "title": "Booking",
+      "start": "Starts at",
+      "end": "Ends at",
+      "duration": "Duration",
+      "plate": "Plate",
+      "total": "Total",
+      "booked-by": "Booked by",
+      "empty-title": "Booking not found"
+    },
+    "lots": {
+      "title": "My lots",
+      "add-lot": "Add parking lot",
+      "empty-title": "You haven't added any parking spaces",
+      "empty-description": "Add new parking spaces to start earning"
+    },
+    "lot": {
+      "title": "Parking lot",
+      "details": "Details",
+      "reviews": "Reviews",
+      "options": "Options",
+      "details-tab": {
+        "lot-title": "Title",
+        "address": "Address",
+        "images": "Images",
+        "rate": "Rate",
+        "rates": "Rates",
+        "review": "review",
+        "hours": "hours",
+        "hour_unit": "hr",
+        "schedule": "Schedule",
+        "open": "Open",
+        "closed": "Closed",
+        "all-day": "All day",
+        "photos": "Photos",
+        "features": "Features",
+        "add-features": "Add features",
+        "see-more-features": "See {{count}} more features"
+      },
+      "reviews-tab": {
+        "review": "review",
+        "review_plural": "reviews",
+        "out-of": "out of",
+        "rate-parking": "Rate parking",
+        "leave-review": "Leave a review",
+        "review-success": "Parking lot rated successfully",
+        "review-fail": "Failed to rate parking lot",
+        "review-description-label": "Description",
+        "submit-review": "Submit review",
+        "empty-title": "No reviews"
+      },
+      "options-tab": {
+        "unregister-lot": "Unregister parking lot",
+        "are-sure-unregister-lot": "Are you sure you want to unregister this parking lot?",
+        "confirm-unregister": "Confirm",
+        "unregistering-lot": "Unregistering",
+        "unregister-lot-error": "Parking lot unregister failed"
+      },
+      "empty-title": "Parking lot not found",
+      "edit": {
+        "save": "Save",
+        "saving": "Saving",
+        "title": {
+          "title": "Title",
+          "label": "Change your parking lot title",
+          "failed": "Failed to edit address"
+        },
+        "address": {
+          "title": "Address",
+          "failed": "Failed to edit address"
+        },
+        "spots": {
+          "title": "Spots",
+          "no-spot-count": "Please enter the number of spots",
+          "no-vehicle-category": "Add at least one vehicle category",
+          "failed": "Failed to edit spots"
+        },
+        "schedule": {
+          "title": "Schedule",
+          "error": {
+            "add-schedule": "Add at least one schedule",
+            "all-days-selected-add-one-day": "All days are already selected in other schedules. Add at least one day for schedule {{schedule}} or remove it.",
+            "add-day": "Add at least one day to schedule {{schedule}}",
+            "add-slot": "Add at least one time slot to schedule {{schedule}}",
+            "schedule-invalid": "Schedule {{schedule}} is not valid",
+            "slot-invalid": "Time slot {{slot}} on schedule {{schedule}} is not valid"
+          },
+          "failed": "Failed to edit schedule"
+        },
+        "images": {
+          "title": "Images",
+          "add-one-photo": "Add at least one photo",
+          "failed": "Failed to edit images"
+        },
+        "features": {
+          "title": "Features",
+          "failed": "Failed to edit features"
+        },
+        "pricing": {
+          "title": "Rates",
+          "price-minimal": "Minimal price is {{price}} {{currency}}",
+          "failed": "Failed to edit rates"
+        }
+      }
+    },
+    "agenda": {
+      "title": "Agenda",
+      "spot": "Spot",
+      "no-bookings-give-day": "You don't have any bookings"
+    },
+    "settings": {
+      "title": "Settings",
+      "provider-since": "Provider since",
+      "become-client": "Become Client",
+      "become-client-description": "Park easily with LookUp"
+    }
+  },
+  "parkings": {
+    "title": "Parkings",
+    "routes": {
+      "active": "Active",
+      "bookings": "Bookings",
+      "favorites": "Favorites",
+      "history": "History"
+    },
+    "active": {
+      "remaining-time": "Remaining time",
+      "started": "Started at",
+      "end": "Ends",
+      "ticket": "Ticket",
+      "extend": "Extend",
+      "finish": "Finish",
+      "finish-parking": "Parking session has finished, confirm parking exit",
+      "parking-finish-error": "Parking finish failed",
+      "parking-finished": "Parking finished",
+      "empty-title": "You don't have any active bookings",
+      "empty-description": "When you have an active booking, it will appear here"
+    },
+    "bookings": {
+      "empty-title": "You don't have any bookings",
+      "empty-description": "Book a parking lot to start parking"
+    },
+    "booking": {
+      "title": "Booking",
+      "start": "Starts at",
+      "end": "Ends at",
+      "duration": "Duration",
+      "plate": "Plate",
+      "extend": "Extend",
+      "cancel": "Cancel",
+      "canceling": "Canceling",
+      "total": "Total",
+      "ticket": "Ticket",
+      "are-sure-cancel-booking": "Are you sure you want to cancel this booking?",
+      "cancel-booking-error": "Booking cancelation failed",
+      "empty-title": "Booking not found"
+    },
+    "favorites": {
+      "empty-title": "You have no favorite parkings",
+      "empty-description": "Add parkings to your favorites list"
+    },
+    "history": {
+      "empty-title": "You don't have booking history",
+      "empty-description": "All your previous bookings will be displayed here"
+    },
+    "history-booking": {
+      "title": "History",
+      "start": "Started at",
+      "end": "Ended at",
+      "duration": "Duration",
+      "plate": "Plate",
+      "total": "Total",
+      "empty-title": "Booking not found"
+    }
+  },
+  "ticket": {
+    "title": "Ticket",
+    "booking-ticket": "Booking ticket",
+    "vehicle": "Vehicle",
+    "plate": "Plate",
+    "booked-time": "Booked time",
+    "address": "Address",
+    "price": "Price"
+  },
+  "map": {
+    "title": "Map"
+  },
+  "chats": {
+    "title": "Chats",
+    "yesterday": "yesterday",
+    "days-ago": "days ago",
+    "week-ago": "week ago",
+    "empty-title": "You have no chats"
+  },
+  "chat": {
+    "type-message": "Type a message",
+    "message-send-failed": "Message send failed"
+  },
+  "add-lot": {
+    "title": "Add parking lot",
+    "open": "Open",
+    "lot-registered": "Parking lot registered",
+    "lot-registration-failed": "Parking lot registration failed",
+    "address": {
+      "title": "Locate your lot"
+    },
+    "lot-title": {
+      "label": "Write your parking lot title"
+    },
+    "spots": {
+      "title": "How many parking spots does your lot have?",
+      "no-spot-count": "Please enter the number of spots",
+      "no-vehicle-category": "Add at least one vehicle category"
+    },
+    "schedule": {
+      "title": "Choose the schedule of your parking",
+      "non-stop": "24/7",
+      "non-stop-description": "Parking lot is always open",
+      "work-hours": "Work hours",
+      "work-hours-description": "Open from 8:00 to 16:00, Monday to Friday",
+      "custom-schedule": "Custom schedule",
+      "custom-schedule-description": "Create your own schedule",
+      "custom": {
+        "title": "Create parking schedule",
+        "error": {
+          "add-schedule": "Add at least one schedule",
+          "all-days-selected-add-one-day": "All days are already selected in other schedules. Add at least one day for schedule {{schedule}} or remove it.",
+          "add-day": "Add at least one day to schedule {{schedule}}",
+          "add-slot": "Add at least one time slot to schedule {{schedule}}",
+          "schedule-invalid": "Schedule {{schedule}} is not valid",
+          "slot-invalid": "Time slot {{slot}} on schedule {{schedule}} is not valid"
+        }
+      }
+    },
+    "features": {
+      "title": "Select features of your parking lot"
+    },
+    "images": {
+      "title": "Images",
+      "add-one-photo": "Add at least one photo"
+    },
+    "pricing": {
+      "title": "Set the parking rates",
+      "price-minimal": "Minimal price is {{price}} {{currency}}"
+    }
+  },
+  "park-now": {
+    "title": "Park now"
+  },
+  "book": {
+    "title": "Book parking",
+    "park-now": "Park now",
+    "book-parking": "Book parking",
+    "start": "Starts at",
+    "end": "Ends at",
+    "duration": "Duration",
+    "vehicle": "Vehicle",
+    "category": "Category",
+    "plate": "Plate",
+    "price": "Price",
+    "total": "Total",
+    "booking-success": "Booked successfully",
+    "booking-failed": "Booking failed",
+    "confirm-booking": "Confirm & Pay",
+    "booking": "Booking",
+    "payment": {
+      "failed": "Payment failed",
+      "canceled": "Payment canceled",
+      "timeout": "Payment timed out"
+    }
+  },
+  "blocker": {
+    "title": "Blocker",
+    "connected-to": "Connected to",
+    "lookup-blocker": "LookUp Blocker",
+    "close": "Close",
+    "open": "Open",
+    "blocker-locked": "Blocker is locked",
+    "blocker-unlocked": "Blocker is unlocked",
+    "connect": {
+      "title": "Connect to blocker",
+      "lookup-blocker": "LookUp Blocker",
+      "searching": "Searching",
+      "blocker-link-success": "Linked to blocker successfully"
+    }
+  },
+  "components": {
+    "location-manager": {
+      "lookup-no-location-permissions": "Location is required",
+      "no-location-permissions-description": "To find the nearest parking, allow the app to use your location",
+      "give-permissions": "Give permissions"
+    },
+    "address-search": {
+      "current-location": "Current location",
+      "parking-location": "Location where you want to park"
+    },
+    "parking-lot-drawer": {
+      "park": "Park",
+      "details": "Details",
+      "images": "Images",
+      "reviews": "Reviews",
+      "rate": "Rate",
+      "rates": "Rates",
+      "review": "review",
+      "hours": "hours",
+      "hour_unit": "hr",
+      "schedule": "Schedule",
+      "open": "Open",
+      "closed": "Closed",
+      "all-day": "All day",
+      "photos": "Photos",
+      "features": "Features",
+      "see-more-features": "See {{count}} more features",
+      "reviews-tab": {
+        "review": "review",
+        "review_plural": "reviews",
+        "out-of": "out of",
+        "rate-parking": "Rate parking",
+        "leave-review": "Leave a review",
+        "review-success": "Parking lot rated successfully",
+        "review-fail": "Failed to rate parking lot",
+        "review-description-label": "Description",
+        "submit-review": "Submit review",
+        "empty-title": "No reviews"
+      }
+    },
+    "lot-results": {
+      "map": "Map",
+      "lot": "lot",
+      "lots": "{{count}} parking lots",
+      "over-lots": "over {{count}} parking lots",
+      "no-lots-found": "No lots found"
+    },
+    "map-island": {
+      "search-location": "Search a location",
+      "filters": {
+        "title": "Filters",
+        "price": "Price",
+        "vehicle-category": "Vehicle category",
+        "features": "Features",
+        "apply-filters": "Apply filters",
+        "clear-filters": "Clear filters"
+      }
+    },
+    "directions-picker": {
+      "open-apple-maps": "Open in Apple Maps",
+      "open-google-maps": "Open in Google Maps"
+    },
+    "lot-form": {
+      "title": {
+        "title": "Title",
+        "required": "Your parking lot title is required",
+        "not-number": "Parking lot title shouldn't be a number",
+        "placeholder": "Your parking lot title"
+      },
+      "address": {
+        "title": "Address",
+        "failed": "Failed to edit address"
+      },
+      "spots": {
+        "spots": "Spots",
+        "add-spot": "Add spot",
+        "number-spots": "Number of spots",
+        "vehicles": "Vehicles",
+        "add-spot-category": "Add spot category",
+        "add-another-category": "Add another category",
+        "no-spot-count": "Please enter the number of spots",
+        "no-vehicle-category": "Add at least one vehicle category"
+      },
+      "images": {
+        "cover-photo": "Cover photo",
+        "change-photo": "Change photo",
+        "move-forward": "Move forward",
+        "move-backward": "Move backward",
+        "set-cover-photo": "Set as cover",
+        "delete-photo": "Delete",
+        "image-selection-canceled": "Image selection canceled"
+      },
+      "pricing": {
+        "fixed": "Fixed",
+        "hourly": "Hourly",
+        "rates": "Rates",
+        "add-rate": "Add rate",
+        "hour_unit": "hr",
+        "hour": "hour",
+        "hour_plural": "hours",
+        "price-not-number": "Price must be a number",
+        "price-minimal": "Minimal price is {{price}} {{currency}}"
+      },
+      "schedule": {
+        "title": "Schedule",
+        "schedule": "Schedule",
+        "add-schedule": "Add schedule",
+        "time-slots": "Time slots",
+        "add-slot": "Add slot",
+        "days": [
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY",
+          "SUNDAY"
+        ]
+      }
+    }
+  }
+}

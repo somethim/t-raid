@@ -1,0 +1,678 @@
+{
+  "general": {
+    "continue": "Vazhdo",
+    "loading": "Duke u ngarkuar...",
+    "view-more": "Shiko më shumë",
+    "months": [
+      "JANAR",
+      "SHKURT",
+      "MARS",
+      "PRILL",
+      "MAJ",
+      "QERSHOR",
+      "KORRIK",
+      "GUSHT",
+      "SHTATOR",
+      "TETOR",
+      "NËNTOR",
+      "DHJETOR"
+    ],
+    "days": [
+      "HËNË",
+      "MARTË",
+      "MËRKURË",
+      "ENJTE",
+      "PREMTE",
+      "SHTUNË",
+      "DIELË"
+    ],
+    "vehicle-category": {
+      "CAR": "Makinë",
+      "MINI": "Mini",
+      "SEDAN": "Sedan",
+      "COUPE": "Coupe",
+      "SUV": "SUV",
+      "MOTORBIKE": "Motoçikletë",
+      "BUS": "Autobus",
+      "VAN": "Furgon",
+      "TRUCK": "Kamion",
+      "SCOOTER": "Skuter",
+      "CAMPER": "Rulo"
+    },
+    "features": {
+      "COVERED": "I mbuluar",
+      "ELECTRIC_CHARGING": "Karikues",
+      "GATED": "I rrethuar",
+      "SURVEILLANCE": "I mbikëqyrur",
+      "CAR_WASH": "Lavazh"
+    },
+    "settings": {
+      "profile": "Profili",
+      "terms-conditions": "Kushtet e përdorimit",
+      "vehicles": "Mjetet",
+      "activity": "Aktiviteti",
+      "help": "Ndihma",
+      "language": "Gjuha",
+      "appearance": {
+        "title": "Paraqitja",
+        "dark": "E errët",
+        "light": "E çelët",
+        "system": "Sipas sistemit"
+      },
+      "sign-out": {
+        "title": "Dil",
+        "failed": "Dalja dështoi"
+      },
+      "delete-account": {
+        "title": "Fshi llogarinë",
+        "description": "Jeni të sigurt që doni të fshini llogarinë tuaj? Kjo veprim është i pakthyeshëm.",
+        "failed": "Fshirja e llogarisë dështoi",
+        "confirm-delete": "Konfirmoj fshirjen"
+      }
+    }
+  },
+  "network": {
+    "no-internet": "Nuk jeni të lidhur me internet-in"
+  },
+  "update": {
+    "reload-app": "Rinis aplikacionin",
+    "available": "Një version i ri i aplikacionit është i gatshëm për shkarkim",
+    "download": "Shkarko",
+    "downloading": "Duke shkarkuar",
+    "downloaded": "Versioni i ri i aplikacionit është shkarkuar"
+  },
+  "routes": {
+    "sign-in": "Vazhdo",
+    "register": "Regjistrohu",
+    "home": "Kreu",
+    "parkings": "Parkimet",
+    "map": "Harta",
+    "chats": "Bisedat",
+    "settings": "Cilësimet",
+    "bookings": "Rezervimet",
+    "lots": "Parkimet"
+  },
+  "sign-in": {
+    "title": "Hyrja",
+    "sign-in": "Hyr",
+    "signing-in": "Duke hyrë",
+    "don't-have-account": "Nuk ke llogari?",
+    "sign-up": "Regjistrohu",
+    "sign-in-error": "Email-i ose fjalëkalimi është i pasaktë",
+    "email-not-found": "Nuk u gjet asnjë llogari. Sigurohu që email-i të jetë shkruajtur saktë",
+    "incorrect-password": "Fjalëkalim i pasaktë",
+    "too-many-failed-attempts": "Shumë përpjekje të dështuara. Provoni përsëri më vonë",
+    "or": "OSE",
+    "email": {
+      "required": "Email-i është i detyrueshëm",
+      "invalid": "Email-i i nuk është i vlefshëm",
+      "label": "Shkruani email-in",
+      "placeholder": "Email-i juaj"
+    },
+    "password": {
+      "required": "Fjalëkalimi është i detyrueshëm",
+      "short": "Fjalëkalimi duhet të jetë së paku 8 karaktere",
+      "label": "Dhe fjalëkalimin tuaj",
+      "placeholder": "Fjalëkalimi juaj"
+    }
+  },
+  "sign-up": {
+    "title": "Regjistrimi",
+    "client": "Klient",
+    "provider": "Ofrues",
+    "register": "Regjistrohu",
+    "registering": "Duke u regjistruar",
+    "failed": "Regjistrimi dështoi",
+    "full-name": {
+      "required": "Vendosni emrin mbiemrin tuaj",
+      "not-number": "Emri i vendosur nuk duhet të jetë numër",
+      "label": "Shkruani emër mbiemër",
+      "placeholder": "Emër Mbiemër"
+    },
+    "email": {
+      "required": "Email-i është i detyrueshëm",
+      "invalid": "Email-i i vendosur nuk është i vlefshëm",
+      "label": "Shkruani email-in tuaj",
+      "placeholder": "Email-i juaj"
+    },
+    "phone": {
+      "required": "Numri i telefonit është i detyrueshëm",
+      "invalid": "Numri i telefonit nuk është i vlefshëm",
+      "placeholder": "Numri i telefonit",
+      "label": "Shkruani numrin e telefonit",
+      "send-verification-message-failed": "Dërgimi i mesazhit të verifikimit dështoi",
+      "sending-code": "Duke dërguar kodin"
+    },
+    "verify": {
+      "required": "Kodi i verifikimit është i detyrueshëm",
+      "invalid": "Kodi i verifikimit duhet të përmbajë 4 shifra",
+      "label": "Verifiko numrin e telefonit",
+      "verification-failed": "Verifikimi i kodit dështoi",
+      "incorrect": "Kodi i verifikimit është i pasaktë",
+      "verifying": "Duke verifikuar kodin"
+    },
+    "birthdate": {
+      "invalid": "Datëlindja nuk është e vlefshme",
+      "required": "Datëlindja është e detyrueshme",
+      "underage": "Duhet të jeni të paktën 18 vjeç",
+      "placeholder": "Datëlindja juaj",
+      "label": "Vendosni datëlindjen tuaj"
+    },
+    "password": {
+      "required": "Fjalëkalimi është i detyrueshëm",
+      "invalid": "Fjalëkalimi duhet të përmbajë të paktën 8 karaktere",
+      "placeholder": "Fjalëkalimi juaj",
+      "label": "Krijo fjalëkalimin tënd"
+    }
+  },
+  "onboard": {
+    "fast-easy-parking": "Parkim i shpejtë dhe i lehtë",
+    "fast-easy-parking-description": "LookUp ju ndihmon të gjeni parkimin më lehtë dhe më shpejt se kurrë më parë.",
+    "security-priority": "Siguria është prioritet",
+    "security-priority-description": "Ne e marrim seriozisht privatësinë tuaj dhe sigurojmë që të dhënat tuaja të jenë të sigurta.",
+    "lookup-coins": "LookUp Coins",
+    "lookup-coins-description": "LookUp Coin është një valutë e re që përdoret për të paguar për vende parkimi dhe shërbime të tjera."
+  },
+  "client": {
+    "home": {
+      "welcome-back": "Mirë se vini",
+      "favorite-lots": "Parkimet e preferuara",
+      "my-spaces": "Hapësirat e mia",
+      "parking-categories": "Kategoritë e parkimeve",
+      "nearby-parking": "Parkimet pranë",
+      "view-more": "Shiko më shumë",
+      "airport": "Aeroport",
+      "city-center": "Qendër qyteti",
+      "school": "Shkollë",
+      "park": "Park",
+      "active": "Aktuale",
+      "bookings": "Rezervimet",
+      "favorites": "Të preferuarat",
+      "history": "Historiku",
+      "deposit": "Depozito",
+      "transfer": "Transfero",
+      "details": "Detajet",
+      "search-name-location": "Kërkoni sipas emrit ose zonës",
+      "no-nearby-lots": "Nuk ka parkime pranë jush"
+    },
+    "settings": {
+      "title": "Cilësimet",
+      "client-since": "Parkues që nga",
+      "become-provider": "Bëhu Ofrues",
+      "become-provider-description": "Fito para përmes LookUp"
+    }
+  },
+  "provider": {
+    "register": {
+      "title": "Krijo llogari",
+      "label": "Regjistrohu si ofrues",
+      "iban": {
+        "label": "IBAN",
+        "required": "IBAN-i është i detyrueshëm",
+        "not-number": "IBAN-i nuk duhet të jetë numër"
+      },
+      "swift": {
+        "label": "Kodi SWIFT",
+        "required": "Kodi SWIFT është i detyrueshëm",
+        "not-number": "Kodi SWIFT nuk duhet të jetë numër"
+      },
+      "birthdate": {
+        "label": "Vendosni datëlindjen tuaj",
+        "placeholder": "Datëlindja juaj",
+        "invalid": "Datëlindja nuk është e vlefshme",
+        "required": "Datëlindja është e detyrueshme",
+        "underage": "Duhet të jeni të paktën 18 vjeç"
+      },
+      "address": {
+        "label": "Adresa",
+        "required": "Adresa është e detyrueshme",
+        "not-number": "Adresa nuk duhet të jetë numër",
+        "street": {
+          "label": "Rruga",
+          "required": "Rruga është e detyrueshme",
+          "not-number": "Rruga nuk duhet të jetë numër"
+        },
+        "city": {
+          "label": "Qyteti",
+          "required": "Qyteti është i detyrueshëm",
+          "not-number": "Qyteti nuk duhet të jetë numër"
+        },
+        "postalCode": {
+          "label": "Kodi postar",
+          "required": "Kodi postar është i detyrueshëm",
+          "invalid": "Kodi postar nuk është i vlefshëm"
+        }
+      },
+      "register": "Regjistrohu",
+      "registering": "Duke u regjistruar",
+      "registered-as-provider": "U regjistruat si ofrues",
+      "register-failed": "Regjistrimi dështoi"
+    },
+    "home": {
+      "welcome-back": "Mirë se vini",
+      "balance": "Balanca juaj",
+      "my-parkings": "Parkimet e mia",
+      "bookings": "Rezervimet",
+      "view-more": "Shiko më shumë",
+      "edit-parking-details": "Ndrysho detajet e parkimit",
+      "no-lots": "Nuk keni parkime",
+      "no-bookings": "Nuk keni rezervime"
+    },
+    "camera": {
+      "title": "Skano Biletën"
+    },
+    "bookings": {
+      "title": "Rezervimet",
+      "slot": "Fasha",
+      "price": "Çmimi",
+      "empty-title": "Nuk keni rezervime",
+      "empty-description": "Rezervimet e bëra në parkimet tuaja do të shfaqen këtu"
+    },
+    "booking": {
+      "title": "Rezervim",
+      "start": "Filloi në",
+      "end": "Mbaroi në",
+      "duration": "Kohëzgjatja",
+      "plate": "Targa",
+      "total": "Totali",
+      "booked-by": "Rezervuar nga",
+      "empty-title": "Rezervimi nuk u gjet"
+    },
+    "lots": {
+      "title": "Parkimet e mia",
+      "add-lot": "Shto vend parkimi",
+      "empty-title": "Nuk keni parkime",
+      "empty-description": "Shtoni parkime të reja për të filluar të fitoni"
+    },
+    "lot": {
+      "title": "Parkimi",
+      "details": "Detajet",
+      "reviews": "Vlerësimet",
+      "options": "Opsionet",
+      "details-tab": {
+        "lot-title": "Titulli",
+        "address": "Adresa",
+        "images": "Fotot",
+        "review": "vlerësim",
+        "hours": "orë",
+        "hour_unit": "orë",
+        "rate": "Tarifa",
+        "rates": "Tarifat",
+        "schedule": "Orari",
+        "open": "Hapur",
+        "closed": "Mbyllur",
+        "all-day": "Gjithë ditën",
+        "photos": "Fotot",
+        "features": "Veçoritë",
+        "add-features": "Shto veçori",
+        "see-more-features": "Shiko {{count}} më shumë veçori"
+      },
+      "reviews-tab": {
+        "review": "vlerësim",
+        "review_plural": "vlerësime",
+        "out-of": "nga",
+        "rate-parking": "Vlerëso parkimin",
+        "leave-review": "Bëj një vlerësim",
+        "review-success": "Parkimi u vlerësua me sukses",
+        "review-fail": "Vlerësimi i parkimit dështoi",
+        "review-description-label": "Përshkrimi",
+        "submit-review": "Dërgo vlerësimin",
+        "empty-title": "Ky parkim nuk ka vlerësime"
+      },
+      "options-tab": {
+        "unregister-lot": "Hiq parkimin",
+        "are-sure-unregister-lot": "Jeni të sigurt që doni të hiqni parkimin?",
+        "confirm-unregister": "Konfirmoj heqjen",
+        "unregistering-lot": "Duke hequr",
+        "unregister-lot-error": "Heqja e parkimit dështoi"
+      },
+      "empty-title": "Parkimi nuk u gjet",
+      "edit": {
+        "save": "Ruaj",
+        "saving": "Duke ruajtur",
+        "title": {
+          "title": "Emri",
+          "label": "Ndrysho emrin e vendit të parkimit",
+          "failed": "Ndryshimi i emrit dështoi"
+        },
+        "address": {
+          "title": "Adresa",
+          "failed": "Ndryshimi i adresës dështoi"
+        },
+        "spots": {
+          "title": "Hapsirat",
+          "no-spot-count": "Numri i hapësirave është i detyrueshëm",
+          "no-vehicle-category": "Përcaktoni të paktën një kategori mjeti",
+          "failed": "Failed to edit spots"
+        },
+        "schedule": {
+          "title": "Orari",
+          "error": {
+            "add-schedule": "Shto të paktën një orar",
+            "all-days-selected-add-one-day": "Të gjitha ditët janë zgjedhur tashmë në oraret e tjera. Shto të paktën një ditë për orarin {{ schedule }} ose hiqe atë.",
+            "add-day": "Shto të paktën një ditë për orarin {{schedule}}",
+            "add-slot": "Shto të paktën një fashë kohore për orarin {{schedule}}",
+            "schedule-invalid": "Orari {{schedule}} nuk është i vlefshëm",
+            "slot-invalid": "Fasha kohore {{slot}} në orarin {{schedule}} nuk është e vlefshme"
+          },
+          "failed": "Ndryshimi i orarit dështoi"
+        },
+        "images": {
+          "title": "Fotot",
+          "add-one-photo": "Shto të paktën një foto",
+          "failed": "Ndryshimi i fotove dështoi"
+        },
+        "features": {
+          "title": "Veçoritë",
+          "failed": "Ndryshimi i veçorive dështoi"
+        },
+        "pricing": {
+          "title": "Tarifat",
+          "price-minimal": "Çmimi minimal është {{price}} {{currency}}",
+          "failed": "Ndryshimi i tarifave dështoi"
+        }
+      }
+    },
+    "settings": {
+      "title": "Cilësimet",
+      "provider-since": "Ofrues që nga",
+      "become-client": "Bëhu Klient",
+      "become-client-description": "Parko thjeshtë me LookUp"
+    },
+    "agenda": {
+      "title": "Agjenda",
+      "spot": "Hapësira",
+      "no-bookings-give-day": "Nuk keni rezervime për këtë ditë"
+    }
+  },
+  "parkings": {
+    "title": "Parkimet",
+    "routes": {
+      "active": "Aktuale",
+      "bookings": "Rezervimet",
+      "favorites": "Të preferuarat",
+      "history": "Historiku"
+    },
+    "active": {
+      "remaining-time": "Koha e mbetur",
+      "started": "Filloi në",
+      "end": "Mbaron në",
+      "finish": "Përfundo",
+      "extend": "Zgjat",
+      "finish-parking": "Parkimi ka mbaruar, confirmoni largimin nga parkimi",
+      "parking-finished": "Parkimi përfundoi",
+      "parking-finish-error": "Përfundimi i parkimit dështoi",
+      "empty-title": "Nuk keni rezervim aktiv",
+      "ticket": "Bileta",
+      "empty-description": "Kur të keni një rezervim aktiv, do të shfaqet këtu"
+    },
+    "bookings": {
+      "empty-title": "Nuk keni rezervime",
+      "empty-description": "Rezervoni një vend parkimi tani"
+    },
+    "booking": {
+      "title": "Rezervim",
+      "start": "Fillon në",
+      "end": "Mbaron në",
+      "duration": "Kohëzgjatja",
+      "plate": "Targa",
+      "extend": "Zgjat",
+      "cancel": "Anullo",
+      "canceling": "Duke anulluar",
+      "total": "Totali",
+      "ticket": "Bileta",
+      "are-sure-cancel-booking": "Jeni të sigurt që doni ta anulloni rezervimin?",
+      "cancel-booking-error": "Anullimi i rezervimit dështoi",
+      "empty-title": "Rezervimi nuk u gjet"
+    },
+    "favorites": {
+      "empty-title": "Nuk keni parkime të preferuara",
+      "empty-description": "Shtoni parkime në listën tuaj të preferuarave"
+    },
+    "history": {
+      "empty-title": "Nuk keni historik rezervimesh",
+      "empty-description": "Këtu do të shfaqen të gjitha rezervimet tuaja të mëparshme"
+    },
+    "history-booking": {
+      "title": "Historiku",
+      "start": "Filloi në",
+      "end": "Mbaroi në",
+      "duration": "Kohëzgjatja",
+      "plate": "Targa",
+      "total": "Totali",
+      "empty-title": "Rezervimi nuk u gjet"
+    }
+  },
+  "ticket": {
+    "title": "Bileta",
+    "booking-ticket": "Biletë rezervimi",
+    "vehicle": "Mjeti",
+    "plate": "Targa",
+    "booked-time": "Koha e rezervuar",
+    "address": "Adresa",
+    "price": "Çmimi"
+  },
+  "map": {
+    "title": "Harta"
+  },
+  "chats": {
+    "title": "Bisedat",
+    "yesterday": "dje",
+    "days-ago": "ditë më parë",
+    "week-ago": "javë më parë",
+    "empty-title": "Nuk keni biseda"
+  },
+  "chat": {
+    "type-message": "Shkruaj nje mesazh",
+    "message-send-failed": "Dërgimi i mesazhit dështoi"
+  },
+  "add-lot": {
+    "title": "Shto vend parkimi",
+    "open": "Hapur",
+    "lot-registered": "Vendi i parkimit u regjistrua",
+    "lot-registration-failed": "Regjistrimi i parkimit dështoi",
+    "address": {
+      "title": "Lokalizo parkimin tend"
+    },
+    "lot-title": {
+      "label": "Shkruani emrin e vendit të parkimit"
+    },
+    "spots": {
+      "title": "Vendosni hapësirat e parkimit",
+      "no-spot-count": "Përcaktoni numrin e hapësirave",
+      "no-vehicle-category": "Përcaktoni të paktën një kategori mjeti"
+    },
+    "schedule": {
+      "title": "Zgjidh orarin e parkimit",
+      "non-stop": "24/7",
+      "non-stop-description": "Parkimi është i gjimonë i hapur",
+      "work-hours": "Orari i punës",
+      "work-hours-description": "Hapur nga 8:00 ne 16:00, E hene - E premte",
+      "custom-schedule": "Orar i personalizuar",
+      "custom-schedule-description": "Orari sipas nevojave tuaja",
+      "custom": {
+        "title": "Krijo orarin e parkimit",
+        "error": {
+          "add-schedule": "Shto të paktën një orar",
+          "all-days-selected-add-one-day": "Të gjitha ditët janë zgjedhur tashmë në oraret e tjera. Shto të paktën një ditë për orarin {{ schedule }} ose hiqe atë.",
+          "add-day": "Shto të paktën një ditë për orarin {{schedule}}",
+          "add-slot": "Shto të paktën një fashë kohore për orarin {{schedule}}",
+          "schedule-invalid": "Orari {{schedule}} nuk është i vlefshëm",
+          "slot-invalid": "Fasha kohore {{slot}} në orarin {{schedule}} nuk është e vlefshme"
+        }
+      }
+    },
+    "features": {
+      "title": "Zgjidh veçoritë e parkimit"
+    },
+    "images": {
+      "title": "Fotot",
+      "add-one-photo": "Shto të paktën një foto"
+    },
+    "pricing": {
+      "title": "Përcakto tarfiat e parkimit",
+      "price-minimal": "Çmimi minimal është {{price}} {{currency}}"
+    }
+  },
+  "park-now": {
+    "title": "Parko tani"
+  },
+  "book": {
+    "title": "Rezervo",
+    "park-now": "Parko tani",
+    "book-parking": "Rezervo parkimin",
+    "start": "Fillon në",
+    "end": "Mbaron në",
+    "duration": "Kohëzgjatja",
+    "vehicle": "Mjeti",
+    "category": "Kategoria",
+    "plate": "Targa",
+    "price": "Çmimi",
+    "total": "Totali",
+    "booking-success": "Rezervimi u krye me sukses",
+    "booking-failed": "Rezervimi dështoi",
+    "confirm-booking": "Konfirmo & Paguaj",
+    "booking": "Duke rezervuar",
+    "payment": {
+      "failed": "Pagesa dështoi",
+      "canceled": "Pagesa u anullua",
+      "timeout": "Koha e pagesës ka skaduar"
+    }
+  },
+  "blocker": {
+    "title": "Bllokuesi i parkimit",
+    "connected-to": "Lidhur me",
+    "lookup-blocker": "LookUp Blocker",
+    "close": "Mbyll",
+    "open": "Hap",
+    "blocker-locked": "Bllokuesi i parkimit u mbyll",
+    "blocker-unlocked": "Bllokuesi i parkimit u hap",
+    "connect": {
+      "title": "Lidhu me bllokuesin",
+      "lookup-blocker": "LookUp Blocker",
+      "searching": "Duke kërkuar",
+      "blocker-link-success": "Lidhja me bllokuesin u bë me sukses"
+    }
+  },
+  "components": {
+    "location-manager": {
+      "lookup-no-location-permissions": "Vendodhja është e detyrueshme",
+      "no-location-permissions-description": "Për të gjetur parkimet më të afërta, lejoni aplikacionin të përdorë vendndodhjen tuaj",
+      "give-permissions": "Lejo vendndodhjen"
+    },
+    "address-search": {
+      "current-location": "Vendodhja aktuale",
+      "parking-location": "Vendi ku doni të parkoni"
+    },
+    "parking-lot-drawer": {
+      "park": "Parko",
+      "details": "Detajet",
+      "images": "Fotot",
+      "reviews": "Vlerësimet",
+      "review": "vlerësim",
+      "hours": "orë",
+      "hour_unit": "orë",
+      "rate": "Tarifa",
+      "rates": "Tarifat",
+      "schedule": "Orari",
+      "open": "Hapur",
+      "closed": "Mbyllur",
+      "all-day": "Gjithë ditën",
+      "photos": "Fotot",
+      "features": "Veçoritë",
+      "see-more-features": "Shiko {{count}} më shumë veçori",
+      "reviews-tab": {
+        "review": "vlerësim",
+        "review_plural": "vlerësime",
+        "out-of": "nga",
+        "rate-parking": "Vlerëso parkimin",
+        "leave-review": "Bëj një vlerësim",
+        "review-success": "Parkimi u vlerësua me sukses",
+        "review-fail": "Vlerësimi i parkimit dështoi",
+        "review-description-label": "Përshkrimi",
+        "submit-review": "Dërgo vlerësimin",
+        "empty-title": "Ky parkim nuk ka vlerësime"
+      }
+    },
+    "lot-results": {
+      "map": "Harta",
+      "lot": "parkim",
+      "lots": "{{count}} parkime",
+      "over-lots": "mbi {{count}} parkime",
+      "no-lots-found": "Nuk u gjet asnjë parkim"
+    },
+    "map-island": {
+      "search-location": "Kërkoni...",
+      "filters": {
+        "title": "Filtrat",
+        "price": "Çmimi",
+        "vehicle-category": "Kategoria e mjetit",
+        "features": "Veçoritë",
+        "apply-filters": "Apliko filtrat",
+        "clear-filters": "Hiq filtrat"
+      }
+    },
+    "directions-picker": {
+      "open-apple-maps": "Hap Apple Maps",
+      "open-google-maps": "Hap Google Maps"
+    },
+    "lot-form": {
+      "title": {
+        "title": "Emri",
+        "required": "Emri i vendit të parkimit është i detyrueshëm",
+        "not-number": "Emri i vendit të parkimit nuk duhet të jetë numër",
+        "placeholder": "Emri i vendit të parkimit"
+      },
+      "address": {
+        "title": "Adresa",
+        "failed": "Ndryshimi i adresës dështoi"
+      },
+      "spots": {
+        "spots": "Hapësirat",
+        "add-spot": "Shto hapësirë",
+        "number-spots": "Nr. i hapësirave",
+        "add-spot-category": "Shto kategori hapësirash",
+        "add-another-category": "Shto një tjeter kategori",
+        "vehicles": "Mjetet",
+        "no-spot-count": "Përcaktoni numrin e hapësirave",
+        "no-vehicle-category": "Përcaktoni të paktën një kategori mjeti"
+      },
+      "images": {
+        "cover-photo": "Kopertina",
+        "change-photo": "Ndrysho foton",
+        "move-forward": "Lëvize përpara",
+        "move-backward": "Lëvize mbrapa",
+        "set-cover-photo": "Vendose si kopertinë",
+        "delete-photo": "Fshije",
+        "image-selection-canceled": "Zgjedhja e imazhit u anullua"
+      },
+      "pricing": {
+        "fixed": "Fikse",
+        "hourly": "Orare",
+        "rates": "Tarifat",
+        "add-rate": "Shto tarifë",
+        "hour_unit": "orë",
+        "hour": "orë",
+        "hour_plural": "orë",
+        "price-not-number": "Çmimi duhet të jetë numër",
+        "price-minimal": "Çmimi minimal është {{price}} {{currency}}"
+      },
+      "schedule": {
+        "title": "Orari",
+        "schedule": "Orari",
+        "add-schedule": "Shto orar",
+        "time-slots": "Fashat kohore",
+        "add-slot": "Shto fashë",
+        "days": [
+          "E HËNË",
+          "E MARTË",
+          "E MËRKURË",
+          "E ENJTE",
+          "E PREMTE",
+          "E SHTUNË",
+          "E DIELË"
+        ]
+      }
+    }
+  }
+}

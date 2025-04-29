@@ -1,51 +1,74 @@
 import { Providers } from "@/components/providers/providers";
+import "@/i18n";
 import "@zenncore/config/tailwind/globals";
+import { useColorScheme } from "@zenncore/hooks/native";
+import "expo-dev-client";
 import { useNetworkState } from "expo-network";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { View } from "react-native";
 import {
   configureReanimatedLogger,
   ReanimatedLogLevel,
 } from "react-native-reanimated";
 import { toast } from "sonner-native";
-import "expo-dev-client";
 
 configureReanimatedLogger({
   level: ReanimatedLogLevel.warn,
   strict: false,
 });
 
+SplashScreen.preventAutoHideAsync();
 SplashScreen.setOptions({
   fade: true,
   duration: 200,
 });
 
-export default function RootLayout() {
+export default () => {
   const networkState = useNetworkState();
   const { t } = useTranslation("", { keyPrefix: "network" });
+  const { isDarkColorScheme } = useColorScheme();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (networkState.isConnected === false) {
       toast.error(t("no-internet"));
     }
-  }, [networkState]);
+    // (async () => {
+    //   const hello = await getIpAddressAsync();
+
+    //   console.log("hello", hello);
+    // })();
+  }, [networkState.isConnected]);
 
   return (
-    <Providers>
-      <View>
+    <>
+      <Providers>
         <Stack
           screenOptions={{
             headerShown: false,
+            navigationBarColor: isDarkColorScheme
+              ? "hsl(0 0% 10%)"
+              : "hsl(0 0% 99%)",
           }}
         />
-      </View>
-    </Providers>
+        {/* <Stack.Screen
+            name="(app)"
+            options={({ navigation }) => {
+              const navigationRoutes = navigation.getState().routes;
+              const routeNames = navigationRoutes.map((route) => route.name);
+
+              console.log("routeNames", routeNames);
+
+              return {};
+            }}
+          />
+        </Stack> */}
+      </Providers>
+    </>
   );
-}
+};
 
 export {
   // Catch any errors thrown by the Layout component.

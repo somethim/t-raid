@@ -1,21 +1,16 @@
 import { useConvexAuth } from "convex/react";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
+import { useEffect } from "react";
 
 export default () => {
   const { isAuthenticated } = useConvexAuth();
+  const router = useRouter();
 
-  if (!isAuthenticated) {
-    return (
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="sign-in" />
-        <Stack.Screen name="sign-up" />
-      </Stack>
-    );
-  }
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    if (router.canDismiss()) router.dismissAll();
+    router.replace("/home");
+  }, [isAuthenticated, router]);
 
   return (
     <Stack

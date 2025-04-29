@@ -1,6 +1,7 @@
 import { HomeIcon } from "@zennui/icons";
 import type { Icon as IconType } from "@zenncore/types/components";
 import type { Href } from "expo-router";
+import { Platform } from "react-native";
 
 export type Route = Readonly<{
   name: string;
@@ -56,3 +57,7 @@ export const ROUTES = {
   },
 } as const;
 export type Routes = Record<string, Route>;
+
+export const STEP_FORM_SCROLL_VIEW_BOTTOM_OFFSET =
+  Platform.OS === "ios" ? 120 : 120;
+export const STEP_FORM_CONTINUE_BUTTON_OFFSET = Platform.OS === "ios" ? 40 : 50;

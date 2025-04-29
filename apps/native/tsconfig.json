@@ -17,11 +17,12 @@
     }
   },
   "include": [
+    "*.ts",
     "src",
-    "declerations",
     "tailwind.config.js",
-    "nativewind-env.d.ts",
+    "@types/i18next.d.ts",
     ".expo/types/**/*.ts",
+    "nativewind-env.d.ts",
     "expo-env.d.ts"
   ]
 }
