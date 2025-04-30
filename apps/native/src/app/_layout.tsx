@@ -35,11 +35,6 @@ export default () => {
     if (networkState.isConnected === false) {
       toast.error(t("no-internet"));
     }
-    // (async () => {
-    //   const hello = await getIpAddressAsync();
-
-    //   console.log("hello", hello);
-    // })();
   }, [networkState.isConnected]);
 
   return (
@@ -53,18 +48,6 @@ export default () => {
               : "hsl(0 0% 99%)",
           }}
         />
-        {/* <Stack.Screen
-            name="(app)"
-            options={({ navigation }) => {
-              const navigationRoutes = navigation.getState().routes;
-              const routeNames = navigationRoutes.map((route) => route.name);
-
-              console.log("routeNames", routeNames);
-
-              return {};
-            }}
-          />
-        </Stack> */}
       </Providers>
     </>
   );
