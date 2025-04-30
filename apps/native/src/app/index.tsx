@@ -44,8 +44,7 @@ export default () => {
   return (
     <>
       <View
-        // @ts-expect-error: nativewind
-        className={"mt-auto gap-6 px-6"}
+        className={"mt-auto gap-6 px-6 z-10"}
         style={{ paddingBottom: bottom + 40 }}
       >
         <Link href={"/sign-in"} asChild>
@@ -55,7 +54,7 @@ export default () => {
                 "pointer-events-none border-0 font-header text-foreground"
               }
             >
-              {t("routes.login")}
+              {t("routes.sign-in")}
             </Text>
           </Button>
         </Link>

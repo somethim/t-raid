@@ -1,9 +1,154 @@
 {
-  "routes": {
-    "login": "Login",
-    "register": "Register"
+  "general": {
+    "continue": "Continue",
+    "loading": "Loading...",
+    "view-more": "View more",
+    "months": [
+      "JANUARY",
+      "FEBRUARY",
+      "MARCH",
+      "APRIL",
+      "MAY",
+      "JUNE",
+      "JULY",
+      "AUGUST",
+      "SEPTEMBER",
+      "OCTOBER",
+      "NOVEMBER",
+      "DECEMBER"
+    ],
+    "days": [
+      "MONDAY",
+      "TUESDAY",
+      "WEDNESDAY",
+      "THURSDAY",
+      "FRIDAY",
+      "SATURDAY",
+      "SUNDAY"
+    ],
+    "settings": {
+      "profile": "Profile",
+      "terms-conditions": "Terms & Conditions",
+      "vehicles": "Vehicles",
+      "activity": "Activity",
+      "help": "Help",
+      "language": "Language",
+      "appearance": {
+        "title": "Appearance",
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+      },
+      "sign-out": {
+        "title": "Sign out",
+        "failed": "Sign out failed"
+      },
+      "delete-account": {
+        "title": "Delete account",
+        "description": "Are you sure you want to delete your account? This action is irreversible.",
+        "failed": "Failed to delete account",
+        "confirm-delete": "Confirm delete"
+      }
+    }
   },
   "network": {
     "no-internet": "You are not connected to the internet"
+  },
+  "routes": {
+    "sign-in": "Continue",
+    "register": "Register",
+    "home": "Home",
+    "child": "Child",
+    "parent": "Parent"
+  },
+  "sign-in": {
+    "title": "Sign in",
+    "sign-in": "Sign in",
+    "signing-in": "Signing in",
+    "don't-have-account": "Don't have an account?",
+    "register": "Sign up",
+    "sign-in-error": "Email or password is incorrect",
+    "email-not-found": "No account found. Please ensure the email is entered correctly",
+    "incorrect-password": "Incorrect password",
+    "too-many-failed-attempts": "Too many failed attempts. Please try again later",
+    "or": "OR",
+    "email": {
+      "required": "Email is required",
+      "invalid": "Email is invalid",
+      "label": "Write your email",
+      "placeholder": "Your email"
+    },
+    "password": {
+      "required": "Password is required",
+      "short": "Password must be at least 8 characters long",
+      "label": "And your password",
+      "placeholder": "Your password"
+    }
+  },
+  "register": {
+    "title": "Sign up",
+    "client": "Client",
+    "provider": "Provider",
+    "register": "Register",
+    "registering": "Registering",
+    "failed": "Sign up failed",
+    "full-name": {
+      "required": "Your full name is required",
+      "not-number": "Entered full name shouldn't be a number",
+      "placeholder": "Your full name",
+      "label": "Write your full name"
+    },
+    "email": {
+      "required": "Your email is required",
+      "invalid": "Email is invalid",
+      "label": "Write your email",
+      "placeholder": "Your email"
+    },
+    "phone": {
+      "required": "Your phone number is required",
+      "invalid": "Phone number is not valid",
+      "placeholder": "phone number",
+      "label": "Write your phone number",
+      "send-verification-message-failed": "Failed to send verification message",
+      "sending-code": "Sending Code"
+    },
+    "verify": {
+      "required": "Verification code is required",
+      "invalid": "Verification code must contain 4 digits",
+      "label": "Verify phone number",
+      "verification-failed": "OTP verification failed",
+      "incorrect": "Incorrect verification code",
+      "verifying": "Verifying OTP"
+    },
+    "birthdate": {
+      "invalid": "Birthdate is not valid",
+      "required": "Birthdate is required",
+      "underage": "You must be at least 18 years old",
+      "placeholder": "Your birthdate",
+      "label": "Enter your birthdate"
+    },
+    "password": {
+      "required": "Password is required",
+      "invalid": "Password must be at least 8 characters",
+      "placeholder": "Your password",
+      "label": "Write your password"
+    }
+  },
+  "home": {
+    "welcome-back": "Welcome back"
+  },
+  "child": {
+    "budget": {
+      "title": "Budget"
+    },
+    "card": {
+      "title": "Card"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
+  "parent": {
+    "title": "Parent"
   }
 }

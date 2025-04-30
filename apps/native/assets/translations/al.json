@@ -1,9 +1,153 @@
 {
-  "routes": {
-    "login": "Vazhdo",
-    "register": "Regjistrohu"
+  "general": {
+    "continue": "Vazhdo",
+    "loading": "Duke ngarkuar...",
+    "view-more": "Shiko më shumë",
+    "months": [
+      "JANAR",
+      "SHKURT",
+      "MARS",
+      "PRILL",
+      "MAJ",
+      "QERSHOR",
+      "KORRIK",
+      "GUSHT",
+      "SHTATOR",
+      "TETOR",
+      "NËNTOR",
+      "DHJETOR"
+    ],
+    "days": [
+      "E HENË",
+      "E MARTË",
+      "E MËRKURË",
+      "E ENJTË",
+      "E PREMTË",
+      "E SHTUNË",
+      "E DIEL"
+    ],
+    "settings": {
+      "profile": "Profili",
+      "terms-conditions": "Kushtet dhe Kushtet",
+      "vehicles": "Automjetet",
+      "activity": "Aktiviteti",
+      "help": "Ndihmë",
+      "language": "Gjuha",
+      "appearance": {
+        "title": "Pamja",
+        "dark": "E errët",
+        "light": "E lehtë",
+        "system": "Sistemi"
+      },
+      "sign-out": {
+        "title": "Shkyçuni",
+        "failed": ""
+      },
+      "delete-account": {
+        "title": "",
+        "description": "",
+        "failed": "",
+        "confirm-delete": ""
+      }
+    }
   },
   "network": {
-    "no-internet": "Nuk jeni të lidhur me internet-in"
+    "no-internet": "Nuk jeni të lidhur në internet"
+  },
+  "routes": {
+    "sign-in": "Vazhdo",
+    "register": "Regjistrohu",
+    "home": "Shtëpia",
+    "profile": "Profili",
+    "vehicles": "Automjetet",
+    "activity": "Aktiviteti",
+    "help": "Ndihmë"
+  },
+  "sign-in": {
+    "title": "Hyrja",
+    "sign-in": "Hyr",
+    "signing-in": "Duke hyrë",
+    "don't-have-account": "Nuk ke llogari?",
+    "sign-up": "Regjistrohu",
+    "sign-in-error": "Email-i ose fjalëkalimi është i pasaktë",
+    "email-not-found": "Nuk u gjet asnjë llogari. Sigurohu që email-i të jetë shkruajtur saktë",
+    "incorrect-password": "Fjalëkalim i pasaktë",
+    "too-many-failed-attempts": "Shumë përpjekje të dështuara. Provoni përsëri më vonë",
+    "or": "OSE",
+    "email": {
+      "required": "Email-i është i detyrueshëm",
+      "invalid": "Email-i i nuk është i vlefshëm",
+      "label": "Shkruani email-in",
+      "placeholder": "Email-i juaj"
+    },
+    "password": {
+      "required": "Fjalëkalimi është i detyrueshëm",
+      "short": "Fjalëkalimi duhet të jetë së paku 8 karaktere",
+      "label": "Dhe fjalëkalimin tuaj",
+      "placeholder": "Fjalëkalimi juaj"
+    }
+  },
+  "sign-up": {
+    "title": "Regjistrimi",
+    "client": "Klient",
+    "provider": "Ofrues",
+    "register": "Regjistrohu",
+    "registering": "Duke u regjistruar",
+    "failed": "Regjistrimi dështoi",
+    "full-name": {
+      "required": "Vendosni emrin mbiemrin tuaj",
+      "not-number": "Emri i vendosur nuk duhet të jetë numër",
+      "label": "Shkruani emër mbiemër",
+      "placeholder": "Emër Mbiemër"
+    },
+    "email": {
+      "required": "Email-i është i detyrueshëm",
+      "invalid": "Email-i i vendosur nuk është i vlefshëm",
+      "label": "Shkruani email-in tuaj",
+      "placeholder": "Email-i juaj"
+    },
+    "phone": {
+      "required": "Numri i telefonit është i detyrueshëm",
+      "invalid": "Numri i telefonit nuk është i vlefshëm",
+      "placeholder": "Numri i telefonit",
+      "label": "Shkruani numrin e telefonit",
+      "send-verification-message-failed": "Dërgimi i mesazhit të verifikimit dështoi",
+      "sending-code": "Duke dërguar kodin"
+    },
+    "verify": {
+      "required": "Kodi i verifikimit është i detyrueshëm",
+      "invalid": "Kodi i verifikimit duhet të përmbajë 4 shifra",
+      "label": "Verifiko numrin e telefonit",
+      "verification-failed": "Verifikimi i kodit dështoi",
+      "incorrect": "Kodi i verifikimit është i pasaktë",
+      "verifying": "Duke verifikuar kodin"
+    },
+    "birthdate": {
+      "invalid": "Datëlindja nuk është e vlefshme",
+      "required": "Datëlindja është e detyrueshme",
+      "underage": "Duhet të jeni të paktën 18 vjeç",
+      "placeholder": "Datëlindja juaj",
+      "label": "Vendosni datëlindjen tuaj"
+    },
+    "password": {
+      "required": "Fjalëkalimi është i detyrueshëm",
+      "invalid": "Fjalëkalimi duhet të përmbajë të paktën 8 karaktere",
+      "placeholder": "Fjalëkalimi juaj",
+      "label": "Krijo fjalëkalimin tënd"
+    }
+  },
+  "child": {
+    "budget": {
+      "title": "Budget"
+    },
+    "card": {
+      "title": "Card"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
+  "parent": {
+    "title": "Parent"
   }
 }

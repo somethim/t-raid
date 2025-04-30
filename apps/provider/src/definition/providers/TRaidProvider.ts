@@ -18,7 +18,7 @@ const signInSchema = z.object({
 });
 
 const signUpSchema = signInSchema.extend({
-  flow: z.literal("sign-up"),
+  flow: z.literal("register"),
   fullName: z.string(),
   phone: z.string(),
   birthdate: z.string().datetime(),
@@ -59,7 +59,7 @@ export const TRaidProvider = () => {
 
       const user = await (async () => {
         switch (flow) {
-          case "sign-up": {
+          case "register": {
             const data = profile as Required<z.infer<typeof signUpSchema>>;
 
             const { flow, token, ...fields } = data;

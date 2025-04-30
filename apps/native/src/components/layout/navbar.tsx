@@ -86,11 +86,6 @@ const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
     const buttonStyles = useAnimatedStyle(() => {
       return {
         paddingHorizontal: interpolate(opacity.value, [0, 1], [8, 16]),
-        // backgroundColor: interpolateColor(
-        //   opacity.value,
-        //   [0, 1],
-        //   ["transparent", "hsl(128,52%,47%)"],
-        // ),
       };
     });
 
@@ -98,20 +93,10 @@ const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
       const subRoutePaths = subRoutes?.map(({ href }) => href) ?? [];
       const routes = [href, ...subRoutePaths];
 
-      const isRootRoute = href === "/client" || href === "/provider";
+      const isRootRoute = href === "/home";
       const isActiveItem = isRootRoute
         ? pathname === href
         : routes.some((route) => pathname.startsWith(route as string));
-
-      // const measurement = measure(itemRef);
-      // console.log(measurement);
-      // runOnUI(() => {
-      //   const measurement = measure(itemRef);
-      //   console.log(measurement);
-      //   if (!measurement) return;
-
-      //   itemNameWidth.value = measurement.width;
-      // });
 
       setActiveItem(isActiveItem);
       setIsItemAnimating(true);
