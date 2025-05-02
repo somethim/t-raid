@@ -1,9 +1,14 @@
-import { Text, View } from "react-native";
+import {View} from "react-native";
+import {H1} from "@zennui/native";
 
 export default () => {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  );
+    const username = "NAN"
+
+    return (
+        <View>
+            <H1>Hello {username}</H1>
+            <Card/>
+            <Shortcut/>
+        </View>
+    );
 };
