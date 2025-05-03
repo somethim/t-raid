@@ -136,6 +136,9 @@
       "label": "Krijo fjalëkalimin tënd"
     }
   },
+  "home": {
+    "welcome-back": "Mirë se vini"
+  },
   "child": {
     "budget": {
       "title": "Budget"

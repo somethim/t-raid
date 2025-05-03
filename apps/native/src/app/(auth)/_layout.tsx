@@ -9,7 +9,7 @@ export default () => {
   useEffect(() => {
     if (!isAuthenticated) return;
     if (router.canDismiss()) router.dismissAll();
-    router.replace("/home");
+    router.replace("/child/home");
   }, [isAuthenticated, router]);
 
   return (

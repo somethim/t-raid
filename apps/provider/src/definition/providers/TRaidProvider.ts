@@ -7,7 +7,7 @@ import {
 import { ConvexError } from "convex/values";
 import { Scrypt } from "lucia";
 import { z } from "zod";
-import { api, internal } from "../_generated/api";
+import { api } from "../_generated/api";
 import type { DataModel } from "../_generated/dataModel";
 import type { Result } from "@zenncore/types/utilities";
 
@@ -19,10 +19,7 @@ const signInSchema = z.object({
 
 const signUpSchema = signInSchema.extend({
   flow: z.literal("register"),
-  fullName: z.string(),
-  phone: z.string(),
-  birthdate: z.string().datetime(),
-  token: z.string(),
+  email: z.string(),
 });
 
 const resetPassword = signInSchema.extend({
@@ -45,13 +42,14 @@ const authorizationSchema = z.discriminatedUnion("flow", [
 ]);
 
 export const TRaidProvider = () => {
-  const provider = "TRaid";
+  const provider = "traid";
 
   return ConvexCredentials<DataModel>({
     id: "traid",
     authorize: async (params, ctx) => {
       const { data, error } = authorizationSchema.safeParse(params);
 
+      console.log(data);
       if (error) throw new ConvexError(error.format());
 
       const { flow, password: secret, ...profile } = data;
@@ -60,29 +58,11 @@ export const TRaidProvider = () => {
       const user = await (async () => {
         switch (flow) {
           case "register": {
-            const data = profile as Required<z.infer<typeof signUpSchema>>;
-
-            const { flow, token, ...fields } = data;
-
-            const result: boolean = await ctx.runQuery(
-              internal.services.temporaryToken.getIsValid,
-              {
-                phone: data.phone,
-                token,
-              },
-            );
-
-            if (!result) {
-              throw new ConvexError(
-                "You're unauthenticated, your security token is invalid",
-              );
-            }
-
             const account = await createAccount<DataModel>(ctx, {
               provider,
               account: { id: email, secret },
               profile: {
-                ...fields,
+                email,
                 phoneVerifiedAt: Date.now(),
               },
               shouldLinkViaEmail: false,

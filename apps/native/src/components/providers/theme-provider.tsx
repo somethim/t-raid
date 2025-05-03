@@ -41,7 +41,8 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
 
   return (
     <ThemeProviderPrimitive
-      value={selectedScheme === "dark" ? DARK_THEME : LIGHT_THEME}
+      // value={selectedScheme === "dark" ? DARK_THEME : LIGHT_THEME}
+      value={LIGHT_THEME}
     >
       {children}
     </ThemeProviderPrimitive>

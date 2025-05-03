@@ -5,10 +5,10 @@ import { cn } from "@zenncore/utils";
 import { cssInterop } from "nativewind";
 import {
   type ComponentProps,
-  type PropsWithChildren,
-  type Ref,
   createContext,
   forwardRef,
+  type PropsWithChildren,
+  type Ref,
   useContext,
   useEffect,
   useId,
@@ -32,15 +32,14 @@ import {
 import {
   Gesture,
   GestureDetector,
-  NativeViewGestureHandler,
   type PanGesture,
   Pressable,
   type PressableProps,
 } from "react-native-gesture-handler";
 import Animated, {
   Extrapolation,
-  type LayoutAnimation,
   interpolate,
+  type LayoutAnimation,
   runOnJS,
   useAnimatedStyle,
   useSharedValue,
@@ -54,11 +53,11 @@ import type {
   SlottablePressableProps,
 } from "../types";
 import {
+  drawerAnimationConfig,
   type SnapPoint,
+  useDrawer,
   type UseDrawerParams,
   type UseDrawerReturn,
-  drawerAnimationConfig,
-  useDrawer,
 } from "./_hooks/use-drawer";
 import { useDrawerRootContext } from "./providers/drawer-root-provider";
 

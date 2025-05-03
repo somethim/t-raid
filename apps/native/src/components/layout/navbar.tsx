@@ -93,7 +93,7 @@ const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
       const subRoutePaths = subRoutes?.map(({ href }) => href) ?? [];
       const routes = [href, ...subRoutePaths];
 
-      const isRootRoute = href === "/home";
+      const isRootRoute = href === "/";
       const isActiveItem = isRootRoute
         ? pathname === href
         : routes.some((route) => pathname.startsWith(route as string));

@@ -51,9 +51,7 @@ export default function Chat() {
   };
   return (
     <View style={styles.container}>
-      {" "}
       <ScrollView style={styles.chat}>
-        {" "}
         {messages
           .filter((msg) => msg.role !== "system")
           .map((msg, index) => (
@@ -61,22 +59,21 @@ export default function Chat() {
               key={index}
               style={msg.role === "user" ? styles.user : styles.bot}
             >
-              {" "}
-              {msg.content}{" "}
+              {msg.content}
             </Text>
-          ))}{" "}
+          ))}
       </ScrollView>
       <TextInput
         style={styles.input}
         placeholder="Enter your message"
         value={input}
         onChangeText={setInput}
-      />{" "}
+      />
       <Button
         title={loading ? "Loading..." : "Send"}
         onPress={sendMessage}
         disabled={loading}
-      />{" "}
+      />
     </View>
   );
 }

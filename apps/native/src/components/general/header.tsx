@@ -12,7 +12,6 @@ import {
   type ViewProps,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { LinearGradient } from "./linear-gradient";
 
 type HeaderClassListKey = "root" | { button: "icon" } | "title";
 
@@ -59,17 +58,10 @@ export const Header = forwardRef<View, HeaderProps>(
         ref={ref}
         className={"absolute z-10 w-full"}
         style={{
+          backgroundColor: "#FFE135",
           height: headerTopOffset + 64,
         }}
       >
-        <LinearGradient
-          locations={locations}
-          variant={variant}
-          colors={gradient ? [gradient.start, gradient.end] : undefined}
-          inverted={false}
-          className="absolute top-0 size-full"
-        />
-
         <View
           className={cn(
             "h-12 flex-row items-center gap-2 px-4",
