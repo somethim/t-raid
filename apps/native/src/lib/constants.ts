@@ -16,17 +16,17 @@ export const CHILD_ROUTES = {
   budget: {
     name: "Budgeting Plan",
     Icon: WalletIcon,
-    href: "/child/budget",
+    href: "/budget",
   },
   home: {
     name: "Home",
     Icon: HomeIcon,
-    href: "/child/home",
+    href: "/home",
   },
   preferences: {
     name: "Preferences",
     Icon: WalletIcon,
-    href: "/child/preferences",
+    href: "/preferences",
   },
 } satisfies Routes;
 
@@ -40,32 +40,32 @@ export const SHORTCUTS = [
   {
     name: "Budgeting Plan",
     Svg: WalletIcon,
-    href: "/child/budget",
+    href: "/budget",
   },
   {
     name: "Preferences",
     Svg: WalletIcon,
-    href: "/child/preferences",
+    href: "/preferences",
   },
   {
     name: "Goals",
     Svg: WalletIcon,
-    href: "/child/preferences/goals",
+    href: "/preferences/goals",
   },
   {
     name: "Raifi",
     Svg: WalletIcon,
-    href: "/child/chatbot",
+    href: "/chatbot",
   },
   {
     name: "Games",
     Svg: WalletIcon,
-    href: "/child/games",
+    href: "/games",
   },
   {
     name: "Leaderboard",
     Svg: WalletIcon,
-    href: "/child/games/leaderboard",
+    href: "/games/leaderboard",
   },
 ] satisfies Shortcut[];
 

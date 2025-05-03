@@ -17,7 +17,6 @@ import { useMMKVString } from "react-native-mmkv";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "@zennui/native/button";
 import { ArrowRightIcon } from "@zennui/icons";
-import { BottomGradient } from "@/assets/svg/bottom-gradient";
 
 cssInterop(Image, { className: "style" });
 cssInterop(ScrollView, { className: "style" });
@@ -37,7 +36,7 @@ export default () => {
   }, [isLoading, isAuthenticated]);
 
   if (isLoading) return <LoadingView />;
-  if (isAuthenticated) return <Redirect href={`/child/home`} />;
+  if (isAuthenticated) return <Redirect href={"/home"} />;
 
   return (
     <>
@@ -47,7 +46,7 @@ export default () => {
         style={{ height: "50%" }}
       />
       <View className={"mt-auto gap-6 px-6 z-10"}>
-        <Link href={"/auth"} asChild>
+        <Link href={"/home"} asChild>
           <Button
             style={{
               alignSelf: "flex-end",
@@ -56,11 +55,14 @@ export default () => {
               "w-20 h-auto aspect-square rounded-full bg-white border-0 bottom-10 right-5"
             }
           >
-            <ArrowRightIcon className={"color-primary size-10"} />
+            <ArrowRightIcon className={"color-secondary size-10"} />
           </Button>
         </Link>
-        <BottomGradient />
       </View>
+      <Image
+        source={require("@/assets/svg/img.png")}
+        className={"w-full absolute bottom-0 right-0 h-36 -z-10"}
+      />
       {!language && (
         <LanguageSelect
           defaultOpen

@@ -1,16 +1,11 @@
 import type { Route, Routes } from "@/lib/constants";
 import { cn } from "@zenncore/utils";
-import { View } from "@zennui/native/slot";
+import { Pressable, View } from "react-native";
 import { Text } from "@zennui/native/text";
 import { usePathname } from "expo-router";
 import { TabTrigger } from "expo-router/ui";
 import { forwardRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Pressable,
-  useWindowDimensions,
-  View as NativeView,
-} from "react-native";
 import Animated, {
   interpolate,
   runOnJS,
@@ -28,16 +23,9 @@ type NavbarProps = {
 };
 
 export const Navbar = ({ routes }: NavbarProps) => {
-  const { width } = useWindowDimensions();
-
   return (
-    <View
-      className={cn(
-        "absolute android:bottom-0 bottom-3 left-0 z-50 w-full px-6 py-4 ",
-        width > 400 ? "px-6" : "px-2",
-      )}
-    >
-      <View className="w-full max-w-[400px] flex-row justify-between self-center rounded-full bg-background-dimmed p-3 shadow shadow-emphasis-dimmed/20 dark:shadow-emphasis-dimmed/5">
+    <View className={"absolute bottom-3 left-0 z-50 w-full px-6 py-4"}>
+      <View className="w-[90%] max-w-[400px] flex-row justify-between self-center rounded-full bg-background-dimmed p-3 shadow shadow-emphasis-dimmed/20 dark:shadow-emphasis-dimmed/5">
         {Object.values(routes).map((route) => (
           <NavbarItem {...route} key={route.name} />
         ))}
@@ -48,7 +36,7 @@ export const Navbar = ({ routes }: NavbarProps) => {
 
 type NavbarItemProps = Route;
 
-const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
+const NavbarItem = forwardRef<View, NavbarItemProps>(
   ({ href, Icon, name, subRoutes }, ref) => {
     const { t } = useTranslation();
     const pathname = usePathname();
@@ -56,7 +44,7 @@ const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
       pathname.startsWith(href as string),
     );
     const [isItemAnimating, setIsItemAnimating] = useState<boolean>(false);
-    const itemRef = useAnimatedRef<NativeView>();
+    const itemRef = useAnimatedRef<View>();
     const itemNameWidth = useSharedValue(0);
     const opacity = useDerivedValue(() => {
       const targetOpacity = Number(isActiveItem);
@@ -132,7 +120,7 @@ const NavbarItem = forwardRef<NativeView, NavbarItemProps>(
                 itemNameWidth.value = layout.width;
               }}
             >
-              <Text className="w-full text-xl">{t(`routes.${name}`)}</Text>
+              <Text className="w-full text-xl">{name}</Text>
             </Animated.View>
           </Animated.View>
         </AnimatedPressable>
