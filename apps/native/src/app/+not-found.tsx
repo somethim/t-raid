@@ -5,7 +5,7 @@ import { View } from "react-native";
 export default () => (
   <>
     <Stack.Screen options={{ title: "Oops!" }} />
-    <View>
+    <View className={"py-safe"}>
       <Text>This screen doesn't exist.</Text>
 
       <Link href="/">

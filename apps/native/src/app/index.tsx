@@ -45,8 +45,8 @@ export default () => {
         className="absolute top-0 w-full"
         style={{ height: "50%" }}
       />
-      <View className={"mt-auto gap-6 px-6 z-10"}>
-        <Link href={"/home"} asChild>
+      <View className={"mt-auto gap-6 px-6 z-10 "}>
+        <Link href={"/budget"} asChild>
           <Button
             style={{
               alignSelf: "flex-end",
@@ -55,12 +55,12 @@ export default () => {
               "w-20 h-auto aspect-square rounded-full bg-white border-0 bottom-10 right-5"
             }
           >
-            <ArrowRightIcon className={"color-secondary size-10"} />
+            <ArrowRightIcon className={"color-black size-10"} />
           </Button>
         </Link>
       </View>
       <Image
-        source={require("@/assets/svg/img.png")}
+        source={require("@/assets/images/img.png")}
         className={"w-full absolute bottom-0 right-0 h-36 -z-10"}
       />
       {!language && (

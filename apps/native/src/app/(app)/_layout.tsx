@@ -1,5 +1,5 @@
 import { TabList, Tabs, TabSlot, TabTrigger } from "expo-router/ui";
-import { CHILD_ROUTES } from "@/lib/constants";
+import { NAVBAR, ROUTES } from "@/lib/constants";
 import { Navbar } from "@/components/layout/navbar";
 
 export default () => {
@@ -7,13 +7,12 @@ export default () => {
     <>
       <Tabs>
         <TabSlot />
-
+        <Navbar routes={NAVBAR} />
         <TabList>
-          {Object.values(CHILD_ROUTES).map((route) => (
+          {Object.values(ROUTES).map((route) => (
             <TabTrigger href={route.href} name={route.name} key={route.name} />
           ))}
         </TabList>
-        <Navbar routes={CHILD_ROUTES} />
       </Tabs>
     </>
   );

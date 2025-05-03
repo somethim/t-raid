@@ -5,8 +5,8 @@
 @layer base {
     :root {
         /* background shades */
-        --background-dimmed: 0 0% 95%;
-        --background: 0 0% 99%;
+        --background-dimmed: 51 66% 79%;
+        --background: 2 100% 100%;
         --background-rich: 0 0% 80%;
         /* foreground shades */
         --foreground-dimmed: 0 0% 45%;

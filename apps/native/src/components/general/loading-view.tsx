@@ -19,7 +19,7 @@ export const LoadingView = ({
       style={style}
     >
       <Image
-        source={require("@/assets/images/cat.jpg")}
+        source={require("@/assets/images/logos/cat.jpg")}
         className={"aspect-square size-12 dark:opacity-40"}
         contentFit="contain"
       />

@@ -5,7 +5,6 @@ import { Text } from "@zennui/native/text";
 import { usePathname } from "expo-router";
 import { TabTrigger } from "expo-router/ui";
 import { forwardRef, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import Animated, {
   interpolate,
   runOnJS,
@@ -25,7 +24,7 @@ type NavbarProps = {
 export const Navbar = ({ routes }: NavbarProps) => {
   return (
     <View className={"absolute bottom-3 left-0 z-50 w-full px-6 py-4"}>
-      <View className="w-[90%] max-w-[400px] flex-row justify-between self-center rounded-full bg-background-dimmed p-3 shadow shadow-emphasis-dimmed/20 dark:shadow-emphasis-dimmed/5">
+      <View className="w-[90%] max-w-[400px] flex-row justify-between self-center rounded-full bg-background p-3 shadow">
         {Object.values(routes).map((route) => (
           <NavbarItem {...route} key={route.name} />
         ))}
@@ -38,7 +37,6 @@ type NavbarItemProps = Route;
 
 const NavbarItem = forwardRef<View, NavbarItemProps>(
   ({ href, Icon, name, subRoutes }, ref) => {
-    const { t } = useTranslation();
     const pathname = usePathname();
     const [isActiveItem, setActiveItem] = useState<boolean>(
       pathname.startsWith(href as string),
@@ -96,14 +94,17 @@ const NavbarItem = forwardRef<View, NavbarItemProps>(
           key={name}
           ref={ref}
           className={cn(
-            "h-auto flex-row items-center gap-0 overflow-hidden rounded-full border-0 py-2",
-            isActiveItem && "gap-2 bg-primary",
+            "h-auto flex-row items-center gap-0 overflow-hidden rounded-full border-0 py-1.5 px-1.5",
+            isActiveItem && "gap-1.5 bg-background-dimmed px-3",
           )}
           style={buttonStyles}
         >
           {Icon && (
             <Icon
-              className={cn("text-primary", isActiveItem && "text-foreground")}
+              className={cn(
+                "text-black size-6",
+                isActiveItem && "text-foreground",
+              )}
             />
           )}
           <Animated.View

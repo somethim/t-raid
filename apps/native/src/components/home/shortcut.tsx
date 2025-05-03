@@ -11,12 +11,12 @@ export const Shortcut = () => {
         <Link href={shortcut.href} key={index} asChild>
           <Button
             className={
-              "bg-white w-[30%] justify-evenly gap-0 flex-col border-0 py-3 h-32"
+              "bg-white w-[30%] justify-evenly gap-0 flex-col border-0 py-3 h-32 shadow-2xl"
             }
           >
-            <shortcut.Svg className={"size-9  text-black"} />
+            <shortcut.Svg className={"size-9 text-black"} />
             <Text
-              className={"color-black  text-center"}
+              className={"color-black text-center"}
               style={{ fontSize: 12, lineHeight: 16 }}
             >
               {shortcut.name}

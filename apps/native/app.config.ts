@@ -28,22 +28,22 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       ITSAppUsesNonExemptEncryption: false,
     },
     icon: {
-      light: "./assets/images/cat.jpg",
-      dark: "./assets/images/cat.jpg",
-      tinted: "./assets/images/cat.jpg",
+      light: "./assets/images/logos/cat.jpg",
+      dark: "./assets/images/logos/cat.jpg",
+      tinted: "./assets/images/logos/cat.jpg",
     },
   },
   android: {
     package: getUniqueIdentifier(),
     adaptiveIcon: {
-      foregroundImage: "./assets/images/cat.jpg",
+      foregroundImage: "./assets/images/logos/cat.jpg",
       backgroundColor: "#ffffff",
     },
   },
   web: {
     bundler: "metro",
     output: "static",
-    favicon: "./assets/images/cat.jpg",
+    favicon: "./assets/images/logos/cat.jpg",
   },
   plugins: [
     "expo-router",
@@ -66,10 +66,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-splash-screen",
       {
-        image: "./assets/images/cat.jpg",
+        image: "./assets/images/logos/cat.jpg",
         backgroundColor: "#ECEDEE",
         dark: {
-          image: "./assets/images/cat.jpg",
+          image: "./assets/images/logos/cat.jpg",
           backgroundColor: "#151718",
         },
         imageWidth: 200,

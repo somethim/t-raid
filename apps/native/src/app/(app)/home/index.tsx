@@ -10,8 +10,8 @@ export default () => {
   const username = "NAN";
 
   return (
-    <View className={"px-6 pt-safe gap-6"}>
-      <H1 className={"color-primary"}>
+    <View className={"px-6 pt-safe gap-6 h-full w-full bg-[#ECECEC]"}>
+      <H1 className={"color-black mt-14"}>
         {t("welcome-back")} {username}
       </H1>
       <Card />

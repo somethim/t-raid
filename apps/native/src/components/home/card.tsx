@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Image } from "expo-image";
+import { Link } from "expo-router";
 
 export const Card = () => {
-  return <Text>Card</Text>;
+  return (
+    <Link href={"/preferences"} asChild>
+      <Image
+        source={require("@/assets/images/Group 268.png")}
+        className={"w-full h-72 my-8"}
+      />
+    </Link>
+  );
 };
