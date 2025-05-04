@@ -3,7 +3,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
@@ -21,7 +20,45 @@ type Message = {
 };
 
 export default function ChatScreen() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  // Initialize with dummy messages - 2 user messages and 3 bot messages
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "1",
+      text: "Hey, can you explain what inflation is?",
+      isUser: true,
+      timestamp: new Date("2025-05-04T10:00:00Z"),
+    },
+    {
+      id: "2",
+      text: "Sure! Inflation is the rate at which the general level of prices for goods and services rises, leading to a decrease in purchasing power.",
+      isUser: false,
+      timestamp: new Date("2025-05-04T10:00:05Z"),
+    },
+    {
+      id: "3",
+      text: "What causes inflation?",
+      isUser: true,
+      timestamp: new Date("2025-05-04T10:01:00Z"),
+    },
+    {
+      id: "4",
+      text: "Inflation can be caused by demand-pull factors (too much demand), cost-push factors (rising production costs), or monetary factors like excessive money supply.",
+      isUser: false,
+      timestamp: new Date("2025-05-04T10:01:10Z"),
+    },
+    {
+      id: "5",
+      text: "Is inflation always bad?",
+      isUser: true,
+      timestamp: new Date("2025-05-04T10:02:00Z"),
+    },
+    {
+      id: "6",
+      text: "Not necessarily. Moderate inflation is normal in a growing economy, but high or unpredictable inflation can be harmful.",
+      isUser: false,
+      timestamp: new Date("2025-05-04T10:02:10Z"),
+    },
+  ]);
   const [inputText, setInputText] = useState("");
 
   const sendMessage = () => {
@@ -48,46 +85,38 @@ export default function ChatScreen() {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
+      className="flex-1 bg-gray-100"
     >
-      <View style={styles.header}>
-        <H4>
-          <ChatBotIcon className={"mx-2 h-20"} />
-          <Text>Reifi</Text>
-        </H4>
+      <View className="bg-white pt-[60px] p-4 border-b border-gray-200">
+        <View className="flex-row items-center">
+          <ChatBotIcon className="mr-2 h-6 w-6" />
+          <H4 className="text-xl font-semibold text-gray-900">Raifi</H4>
+        </View>
       </View>
 
-      <ScrollView
-        style={styles.messagesContainer}
-        contentContainerStyle={styles.messagesList}
-      >
+      <ScrollView className="flex-1" contentContainerClassName="p-4">
         {messages.map((message) => (
           <View
             key={message.id}
-            style={[
-              styles.messageWrapper,
-              message.isUser
-                ? styles.userMessageWrapper
-                : styles.botMessageWrapper,
-            ]}
+            className={`flex-row my-1 ${
+              message.isUser ? "justify-end" : "justify-start"
+            }`}
           >
             <View
-              style={[
-                styles.messageBubble,
-                message.isUser ? styles.userMessage : styles.botMessage,
-              ]}
+              className={`max-w-[80%] p-3 rounded-3xl mb-1 ${
+                message.isUser
+                  ? "bg-[#FFC107] rounded-tr-sm"
+                  : "bg-white rounded-tl-sm"
+              }`}
             >
               <Text
-                style={[
-                  styles.messageText,
-                  message.isUser
-                    ? styles.userMessageText
-                    : styles.botMessageText,
-                ]}
+                className={`text-base font-normal ${
+                  message.isUser ? "text-white" : "text-gray-900"
+                }`}
               >
                 {message.text}
               </Text>
-              <Text style={styles.timestamp}>
+              <Text className="text-xs text-gray-400 mt-1 font-normal">
                 {message.timestamp.toLocaleTimeString([], {
                   hour: "2-digit",
                   minute: "2-digit",
@@ -98,9 +127,9 @@ export default function ChatScreen() {
         ))}
       </ScrollView>
 
-      <View style={styles.inputContainer}>
+      <View className="flex-row p-4 bg-white border-t border-gray-200 items-end bottom-0">
         <TextInput
-          style={styles.input}
+          className="flex-1 bg-gray-100 rounded-3xl p-3 mr-2 max-h-[100px] font-normal text-base text-gray-900"
           value={inputText}
           onChangeText={setInputText}
           placeholder="Type a message..."
@@ -109,102 +138,13 @@ export default function ChatScreen() {
           maxLength={500}
           onSubmitEditing={sendMessage}
         />
-        <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
+        <TouchableOpacity
+          className="bg-[#FFC107] w-11 h-11 rounded-full justify-center items-center"
+          onPress={sendMessage}
+        >
           <SendIcon width={24} height={24} color="#FFFFFF" />
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#F3F4F6",
-  },
-  header: {
-    backgroundColor: "#FFFFFF",
-    padding: 16,
-    paddingTop: 60,
-    borderBottomWidth: 1,
-    borderBottomColor: "#E5E7EB",
-  },
-  headerTitle: {
-    fontSize: 20,
-    fontFamily: "Inter_600SemiBold",
-    color: "#111827",
-  },
-  messagesContainer: {
-    flex: 1,
-  },
-  messagesList: {
-    padding: 16,
-  },
-  messageWrapper: {
-    marginVertical: 4,
-    flexDirection: "row",
-  },
-  userMessageWrapper: {
-    justifyContent: "flex-end",
-  },
-  botMessageWrapper: {
-    justifyContent: "flex-start",
-  },
-  messageBubble: {
-    maxWidth: "80%",
-    padding: 12,
-    borderRadius: 20,
-    marginBottom: 4,
-  },
-  userMessage: {
-    backgroundColor: "#6366F1",
-    borderTopRightRadius: 4,
-  },
-  botMessage: {
-    backgroundColor: "#FFFFFF",
-    borderTopLeftRadius: 4,
-  },
-  messageText: {
-    fontSize: 16,
-    fontFamily: "Inter_400Regular",
-  },
-  userMessageText: {
-    color: "#FFFFFF",
-  },
-  botMessageText: {
-    color: "#111827",
-  },
-  timestamp: {
-    fontSize: 12,
-    color: "#9CA3AF",
-    marginTop: 4,
-    fontFamily: "Inter_400Regular",
-  },
-  inputContainer: {
-    flexDirection: "row",
-    padding: 16,
-    backgroundColor: "#FFFFFF",
-    borderTopWidth: 1,
-    borderTopColor: "#E5E7EB",
-    alignItems: "flex-end",
-  },
-  input: {
-    flex: 1,
-    backgroundColor: "#F3F4F6",
-    borderRadius: 20,
-    padding: 12,
-    marginRight: 8,
-    maxHeight: 100,
-    fontFamily: "Inter_400Regular",
-    fontSize: 16,
-    color: "#111827",
-  },
-  sendButton: {
-    backgroundColor: "#6366F1",
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
