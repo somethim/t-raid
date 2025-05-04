@@ -1,11 +1,11 @@
 import { TabList, Tabs, TabSlot, TabTrigger } from "expo-router/ui";
 import { NAVBAR, ROUTES } from "@/lib/constants";
 import { Navbar } from "@/components/layout/navbar";
-import { usePathname } from 'expo-router';
+import { usePathname } from "expo-router";
 
 export default () => {
   const pathname = usePathname();
-  const isNavbarVisible = !pathname.includes('/chatbot');
+  const isNavbarVisible = !pathname.includes("/chatbot");
 
   return (
     <>

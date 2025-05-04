@@ -1,5 +1,5 @@
-import { Text } from "react-native";
+import LeaderboardScreen from "@traid/game/LeaderboardScreen";
 
 export default () => {
-  return <Text>Game Leaderboard</Text>;
+  return <LeaderboardScreen />;
 };
