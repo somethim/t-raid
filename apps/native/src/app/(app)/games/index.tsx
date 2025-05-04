@@ -1,5 +1,5 @@
-import { Text } from "react-native";
+import App from "@traid/game/App";
 
 export default () => {
-  return <Text>Games</Text>;
+    return <App/>;
 };
