@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 export default () => {
   const { t } = useTranslation("", { keyPrefix: "home" });
 
-  const username = "NAN";
+  const username = "Sara";
 
   return (
     <View className={"px-6 pt-safe gap-6 h-full w-full bg-[#ECECEC]"}>

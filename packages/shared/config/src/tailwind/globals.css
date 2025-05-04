@@ -30,7 +30,7 @@
         --emphasis: 24 9.8% 10%;
         --emphasis-rich: 30 6.25% 25.1%;
         /* destructive shades */
-        --error-dimmed: 0 73.71% 41.76%;
+        --error-dimmed: 073.71% 41.76%;
         --error: 0 72.22% 50.59%;
         --error-rich: 0 90.6% 70.78%;
         --error-foreground: 0 62.82% 30.59%;
@@ -50,7 +50,7 @@
         --warning-rich: 47.95 95.82% 53.14%;
         --warning-foreground: 28.42 72.52% 25.69%;
         /* warning shades */
-        --neutral-dimmed: 200 17.65% 26.67%;
+        --neutral-dimmed: 00 17.65% 26.67%;
         --neutral: 199.09 12.36% 34.9%;
         --neutral-rich: 199.09 9.09% 47.45%;
         --neutral-foreground: 207.27 25.58% 8.43%;

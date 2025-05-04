@@ -17,6 +17,7 @@ import { useMMKVString } from "react-native-mmkv";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "@zennui/native/button";
 import { ArrowRightIcon } from "@zennui/icons";
+import { OnboardingIcon } from "@/assets/svg/onboarding";
 
 cssInterop(Image, { className: "style" });
 cssInterop(ScrollView, { className: "style" });
@@ -43,10 +44,13 @@ export default () => {
       <LinearGradient
         colors={["rgba(255,225,53,1)", "rgba(255,255,255,0)"]}
         className="absolute top-0 w-full"
-        style={{ height: "50%" }}
+        style={{ height: "75%" }}
       />
+      <View className={"mt-32"}>
+        <OnboardingIcon />
+      </View>
       <View className={"mt-auto gap-6 px-6 z-10 "}>
-        <Link href={"/budget"} asChild>
+        <Link href={"/home"} asChild>
           <Button
             style={{
               alignSelf: "flex-end",

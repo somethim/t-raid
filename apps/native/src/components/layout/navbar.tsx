@@ -19,11 +19,17 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 type NavbarProps = {
   routes: Routes;
+  isVisible?: boolean;
 };
 
-export const Navbar = ({ routes }: NavbarProps) => {
+export const Navbar = ({ routes, isVisible = true }: NavbarProps) => {
   return (
-    <View className={"absolute bottom-3 left-0 z-50 w-full px-6 py-4"}>
+    <View 
+      className={cn(
+        "absolute bottom-3 left-0 z-50 w-full px-6 py-4",
+        !isVisible && "hidden"
+      )}
+    >
       <View className="w-[90%] max-w-[400px] flex-row justify-between self-center rounded-full bg-background p-3 shadow">
         {Object.values(routes).map((route) => (
           <NavbarItem {...route} key={route.name} />
