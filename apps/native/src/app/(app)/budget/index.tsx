@@ -5,10 +5,11 @@ import { InteractivePieChart } from "@/components/general/pie";
 import { Goals } from "@/components/general/goals";
 
 const data = [
-  { value: 100, color: "#03acfb", name: "Food" },
-  { value: 150, color: "#ff00c3", name: "Clothes" },
-  { value: 50, color: "#ff0000", name: "Entertainment" },
-  { value: 60, color: "#ff6c00", name: "Other" },
+  { value: 100, color: "#E76E50", name: "Food" },
+  { value: 150, color: "#F4A462", name: "Clothes" },
+  { value: 50, color: "#E8C468", name: "Entertainment" },
+  { value: 20, color: "#274754", name: "Savings" },
+  { value: 60, color: "#2A9D90", name: "Other" },
 ];
 
 export default () => {
